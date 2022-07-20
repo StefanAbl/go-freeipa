@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/tehwalris/go-freeipa/freeipa"
+	"github.com/stefanabl/go-freeipa/freeipa"
 )
 
 func Example_addUser() {
