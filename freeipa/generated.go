@@ -10,7 +10,7 @@ import (
   "strconv"
 )
 
-var apiVersion = "2.240"
+var apiVersion = "2.245"
 
 type request struct {
   Method string `json:"method"`
@@ -8079,6 +8079,12 @@ Revoked on to this date (YYYY-mm-dd)
     RevokedonTo *time.Time `json:"revokedon_to,omitempty"`
   
     /*
+
+Status of the certificate
+    */
+    Status *string `json:"status,omitempty"`
+  
+    /*
 Primary key only
 Results should contain primary key attribute only ("certificate")
     */
@@ -11452,6 +11458,12 @@ Default types of supported user authentication
     Ipauserauthtype *[]string `json:"ipauserauthtype,omitempty"`
   
     /*
+Enable adding subids to new users
+Enable adding subids to new users
+    */
+    Ipauserdefaultsubordinateid *bool `json:"ipauserdefaultsubordinateid,omitempty"`
+  
+    /*
 IPA CA renewal master
 Renewal master for IPA certificate authority
     */
@@ -11462,6 +11474,24 @@ Domain resolution order
 colon-separated list of domains used for short name qualification
     */
     Ipadomainresolutionorder *string `json:"ipadomainresolutionorder,omitempty"`
+  
+    /*
+Setup SID configuration
+New users and groups automatically get a SID assigned
+    */
+    EnableSid *bool `json:"enable_sid,omitempty"`
+  
+    /*
+Add SIDs
+Add SIDs for existing users and groups
+    */
+    AddSids *bool `json:"add_sids,omitempty"`
+  
+    /*
+NetBIOS name of the IPA domain
+NetBIOS name of the IPA domain
+    */
+    NetbiosName *string `json:"netbios_name,omitempty"`
   
     /*
 
@@ -29971,6 +30001,10 @@ Add new ID range.
 
     may be given for a new ID range for the local domain while
 
+        --auto-private-groups
+
+    may be given for a new ID range for a trusted AD domain and
+
         --rid-base
         --dom-sid
 
@@ -30076,6 +30110,12 @@ Range type
 ID range type, one of allowed values
     */
     Iparangetype *string `json:"iparangetype,omitempty"`
+  
+    /*
+Auto private groups
+Auto creation of private groups, one of allowed values
+    */
+    Ipaautoprivategroups *string `json:"ipaautoprivategroups,omitempty"`
   
     /*
 
@@ -30345,6 +30385,12 @@ ID range type, one of allowed values
     Iparangetype *string `json:"iparangetype,omitempty"`
   
     /*
+Auto private groups
+Auto creation of private groups, one of allowed values
+    */
+    Ipaautoprivategroups *string `json:"ipaautoprivategroups,omitempty"`
+  
+    /*
 Time Limit
 Time limit of search in seconds (0 is unlimited)
     */
@@ -30515,6 +30561,12 @@ First RID of the secondary RID range
 
     */
     Ipasecondarybaserid *int `json:"ipasecondarybaserid,omitempty"`
+  
+    /*
+Auto private groups
+Auto creation of private groups, one of allowed values
+    */
+    Ipaautoprivategroups *string `json:"ipaautoprivategroups,omitempty"`
   
     /*
 
@@ -36268,7 +36320,7 @@ Current Password
   
     /*
 OTP
-One Time Password
+The OTP if the user has a token configured
     */
     Otp *string `json:"otp,omitempty"`
   }
@@ -51094,6 +51146,18 @@ sudo rule
 Search for stage users without these member of sudo rules.
     */
     NotInSudorule *[]string `json:"not_in_sudorule,omitempty"`
+  
+    /*
+Subordinate id
+Search for stage users with these member of Subordinate ids.
+    */
+    InSubid *[]string `json:"in_subid,omitempty"`
+  
+    /*
+Subordinate id
+Search for stage users without these member of Subordinate ids.
+    */
+    NotInSubid *[]string `json:"not_in_subid,omitempty"`
   }
 
 type stageuserFindKwParams struct {
@@ -52179,6 +52243,1016 @@ func (t *StageuserShowResult) String() string {
     return fmt.Sprintf("StageuserShowResult[failed json.Marshal: %v]", e)
   }
   return fmt.Sprintf("StageuserShowResult%v", string(b))
+}
+
+/*
+Add a new subordinate id.
+*/
+func (c *Client) SubidAdd(
+  ipauniqueid string, // 
+  reqArgs *SubidAddArgs,
+  optArgs *SubidAddOptionalArgs, // can be nil
+) (*SubidAddResult, error) {
+  if reqArgs == nil {
+    return nil, fmt.Errorf("reqArgs cannot be nil")
+  }
+  kwp := subidAddKwParams{
+    SubidAddArgs: reqArgs,
+    SubidAddOptionalArgs: optArgs,
+    Version: apiVersion,
+  }
+  req := request{
+    Method: "subid_add",
+    Params: []interface{}{
+      []interface{}{ipauniqueid, }, &kwp},
+  }
+  readCloser, e := c.exec(&req)
+  if e != nil {
+    return nil, e
+  }
+  defer readCloser.Close()
+  var res subidAddResponse
+	if e := json.NewDecoder(readCloser).Decode(&res); e != nil {
+		return nil, e
+	}
+	if res.Error != nil {
+		return nil, res.Error
+	}
+  if res.Result == nil {
+    return nil, fmt.Errorf("missing result in response")
+  }
+  return res.Result, nil
+}
+
+type SubidAddArgs struct {
+  
+    /*
+Owner
+Owning user of subordinate id entry
+    */
+    Ipaowner string `json:"ipaowner,omitempty"`
+  }
+
+type SubidAddOptionalArgs struct {
+  
+    /*
+Description
+Subordinate id description
+    */
+    Description *string `json:"description,omitempty"`
+  
+    /*
+SubUID range start
+Start value for subordinate user ID (subuid) range
+    */
+    Ipasubuidnumber *int `json:"ipasubuidnumber,omitempty"`
+  
+    /*
+
+Set an attribute to a name/value pair. Format is attr=value.
+For multi-valued attributes, the command replaces the values already present.
+    */
+    Setattr *[]string `json:"setattr,omitempty"`
+  
+    /*
+
+Add an attribute/value pair. Format is attr=value. The attribute
+must be part of the schema.
+    */
+    Addattr *[]string `json:"addattr,omitempty"`
+  
+    /*
+
+Retrieve and print all attributes from the server. Affects command output.
+    */
+    All *bool `json:"all,omitempty"`
+  
+    /*
+
+Print entries as stored on the server. Only affects output format.
+    */
+    Raw *bool `json:"raw,omitempty"`
+  }
+
+type subidAddKwParams struct {
+  *SubidAddArgs
+  *SubidAddOptionalArgs
+
+  /*
+  Automatically set.
+  Used by the server to determine whether to accept the request.
+  */
+  Version string `json:"version"`
+}
+
+type subidAddResponse struct {
+	Error  *Error      `json:"error"`
+	Result *SubidAddResult `json:"result"`
+}
+
+type SubidAddResult struct {
+  
+  
+    /*
+User-friendly description of action performed
+    (optional)
+    */
+    Summary *string `json:"summary,omitempty"`
+  
+    /*
+
+    (required)
+    */
+    Result Subid `json:"result,omitempty"`
+  
+    /*
+The primary_key value of the entry, e.g. 'jdoe' for a user
+    (required)
+    */
+    Value string `json:"value,omitempty"`
+  }
+
+func (t *SubidAddResult) String() string {
+  if t == nil {
+    return "<nil>"
+  }
+  b, e := json.Marshal(t)
+  if e != nil {
+    return fmt.Sprintf("SubidAddResult[failed json.Marshal: %v]", e)
+  }
+  return fmt.Sprintf("SubidAddResult%v", string(b))
+}
+
+/*
+Delete a subordinate id.
+*/
+func (c *Client) SubidDel(
+  reqArgs *SubidDelArgs,
+  optArgs *SubidDelOptionalArgs, // can be nil
+) (*SubidDelResult, error) {
+  if reqArgs == nil {
+    return nil, fmt.Errorf("reqArgs cannot be nil")
+  }
+  kwp := subidDelKwParams{
+    SubidDelArgs: reqArgs,
+    SubidDelOptionalArgs: optArgs,
+    Version: apiVersion,
+  }
+  req := request{
+    Method: "subid_del",
+    Params: []interface{}{
+      []interface{}{}, &kwp},
+  }
+  readCloser, e := c.exec(&req)
+  if e != nil {
+    return nil, e
+  }
+  defer readCloser.Close()
+  var res subidDelResponse
+	if e := json.NewDecoder(readCloser).Decode(&res); e != nil {
+		return nil, e
+	}
+	if res.Error != nil {
+		return nil, res.Error
+	}
+  if res.Result == nil {
+    return nil, fmt.Errorf("missing result in response")
+  }
+  return res.Result, nil
+}
+
+type SubidDelArgs struct {
+  
+    /*
+Unique ID
+
+    */
+    Ipauniqueid []string `json:"ipauniqueid,omitempty"`
+  }
+
+type SubidDelOptionalArgs struct {
+  
+    /*
+
+Continuous mode: Don't stop on errors.
+    */
+    Continue *bool `json:"continue,omitempty"`
+  }
+
+type subidDelKwParams struct {
+  *SubidDelArgs
+  *SubidDelOptionalArgs
+
+  /*
+  Automatically set.
+  Used by the server to determine whether to accept the request.
+  */
+  Version string `json:"version"`
+}
+
+type subidDelResponse struct {
+	Error  *Error      `json:"error"`
+	Result *SubidDelResult `json:"result"`
+}
+
+type SubidDelResult struct {
+  
+  
+    /*
+User-friendly description of action performed
+    (optional)
+    */
+    Summary *string `json:"summary,omitempty"`
+  
+    /*
+List of deletions that failed
+    (required)
+    */
+    Result interface{} `json:"result,omitempty"`
+  
+    /*
+
+    (required)
+    */
+    Value []string `json:"value,omitempty"`
+  }
+
+func (t *SubidDelResult) String() string {
+  if t == nil {
+    return "<nil>"
+  }
+  b, e := json.Marshal(t)
+  if e != nil {
+    return fmt.Sprintf("SubidDelResult[failed json.Marshal: %v]", e)
+  }
+  return fmt.Sprintf("SubidDelResult%v", string(b))
+}
+
+/*
+Search for subordinate id.
+*/
+func (c *Client) SubidFind(
+  criteria string, // A string searched in all relevant object attributes
+  reqArgs *SubidFindArgs,
+  optArgs *SubidFindOptionalArgs, // can be nil
+) (*SubidFindResult, error) {
+  if reqArgs == nil {
+    return nil, fmt.Errorf("reqArgs cannot be nil")
+  }
+  kwp := subidFindKwParams{
+    SubidFindArgs: reqArgs,
+    SubidFindOptionalArgs: optArgs,
+    Version: apiVersion,
+  }
+  req := request{
+    Method: "subid_find",
+    Params: []interface{}{
+      []interface{}{criteria, }, &kwp},
+  }
+  readCloser, e := c.exec(&req)
+  if e != nil {
+    return nil, e
+  }
+  defer readCloser.Close()
+  var res subidFindResponse
+	if e := json.NewDecoder(readCloser).Decode(&res); e != nil {
+		return nil, e
+	}
+	if res.Error != nil {
+		return nil, res.Error
+	}
+  if res.Result == nil {
+    return nil, fmt.Errorf("missing result in response")
+  }
+  return res.Result, nil
+}
+
+type SubidFindArgs struct {
+  }
+
+type SubidFindOptionalArgs struct {
+  
+    /*
+Unique ID
+
+    */
+    Ipauniqueid *string `json:"ipauniqueid,omitempty"`
+  
+    /*
+Description
+Subordinate id description
+    */
+    Description *string `json:"description,omitempty"`
+  
+    /*
+Owner
+Owning user of subordinate id entry
+    */
+    Ipaowner *string `json:"ipaowner,omitempty"`
+  
+    /*
+SubUID range start
+Start value for subordinate user ID (subuid) range
+    */
+    Ipasubuidnumber *int `json:"ipasubuidnumber,omitempty"`
+  
+    /*
+SubGID range start
+Start value for subordinate group ID (subgid) range
+    */
+    Ipasubgidnumber *int `json:"ipasubgidnumber,omitempty"`
+  
+    /*
+Time Limit
+Time limit of search in seconds (0 is unlimited)
+    */
+    Timelimit *int `json:"timelimit,omitempty"`
+  
+    /*
+Size Limit
+Maximum number of entries returned (0 is unlimited)
+    */
+    Sizelimit *int `json:"sizelimit,omitempty"`
+  
+    /*
+
+Retrieve and print all attributes from the server. Affects command output.
+    */
+    All *bool `json:"all,omitempty"`
+  
+    /*
+
+Print entries as stored on the server. Only affects output format.
+    */
+    Raw *bool `json:"raw,omitempty"`
+  
+    /*
+Primary key only
+Results should contain primary key attribute only ("id")
+    */
+    PkeyOnly *bool `json:"pkey_only,omitempty"`
+  }
+
+type subidFindKwParams struct {
+  *SubidFindArgs
+  *SubidFindOptionalArgs
+
+  /*
+  Automatically set.
+  Used by the server to determine whether to accept the request.
+  */
+  Version string `json:"version"`
+}
+
+type subidFindResponse struct {
+	Error  *Error      `json:"error"`
+	Result *SubidFindResult `json:"result"`
+}
+
+type SubidFindResult struct {
+  
+  
+    /*
+User-friendly description of action performed
+    (optional)
+    */
+    Summary *string `json:"summary,omitempty"`
+  
+    /*
+
+    (required)
+    */
+    Result []Subid `json:"result,omitempty"`
+  
+    /*
+Number of entries returned
+    (required)
+    */
+    Count int `json:"count,omitempty"`
+  
+    /*
+True if not all results were returned
+    (required)
+    */
+    Truncated bool `json:"truncated,omitempty"`
+  }
+
+func (t *SubidFindResult) String() string {
+  if t == nil {
+    return "<nil>"
+  }
+  b, e := json.Marshal(t)
+  if e != nil {
+    return fmt.Sprintf("SubidFindResult[failed json.Marshal: %v]", e)
+  }
+  return fmt.Sprintf("SubidFindResult%v", string(b))
+}
+
+/*
+Generate and auto-assign subuid and subgid range to user entry
+*/
+func (c *Client) SubidGenerate(
+  reqArgs *SubidGenerateArgs,
+  optArgs *SubidGenerateOptionalArgs, // can be nil
+) (*SubidGenerateResult, error) {
+  if reqArgs == nil {
+    return nil, fmt.Errorf("reqArgs cannot be nil")
+  }
+  kwp := subidGenerateKwParams{
+    SubidGenerateArgs: reqArgs,
+    SubidGenerateOptionalArgs: optArgs,
+    Version: apiVersion,
+  }
+  req := request{
+    Method: "subid_generate",
+    Params: []interface{}{
+      []interface{}{}, &kwp},
+  }
+  readCloser, e := c.exec(&req)
+  if e != nil {
+    return nil, e
+  }
+  defer readCloser.Close()
+  var res subidGenerateResponse
+	if e := json.NewDecoder(readCloser).Decode(&res); e != nil {
+		return nil, e
+	}
+	if res.Error != nil {
+		return nil, res.Error
+	}
+  if res.Result == nil {
+    return nil, fmt.Errorf("missing result in response")
+  }
+  return res.Result, nil
+}
+
+type SubidGenerateArgs struct {
+  }
+
+type SubidGenerateOptionalArgs struct {
+  
+    /*
+Owner
+Owning user of subordinate id entry
+    */
+    Ipaowner *string `json:"ipaowner,omitempty"`
+  
+    /*
+
+Retrieve and print all attributes from the server. Affects command output.
+    */
+    All *bool `json:"all,omitempty"`
+  
+    /*
+
+Print entries as stored on the server. Only affects output format.
+    */
+    Raw *bool `json:"raw,omitempty"`
+  }
+
+type subidGenerateKwParams struct {
+  *SubidGenerateArgs
+  *SubidGenerateOptionalArgs
+
+  /*
+  Automatically set.
+  Used by the server to determine whether to accept the request.
+  */
+  Version string `json:"version"`
+}
+
+type subidGenerateResponse struct {
+	Error  *Error      `json:"error"`
+	Result *SubidGenerateResult `json:"result"`
+}
+
+type SubidGenerateResult struct {
+  
+  
+    /*
+User-friendly description of action performed
+    (optional)
+    */
+    Summary *string `json:"summary,omitempty"`
+  
+    /*
+
+    (required)
+    */
+    Result interface{} `json:"result,omitempty"`
+  
+    /*
+The primary_key value of the entry, e.g. 'jdoe' for a user
+    (required)
+    */
+    Value string `json:"value,omitempty"`
+  }
+
+func (t *SubidGenerateResult) String() string {
+  if t == nil {
+    return "<nil>"
+  }
+  b, e := json.Marshal(t)
+  if e != nil {
+    return fmt.Sprintf("SubidGenerateResult[failed json.Marshal: %v]", e)
+  }
+  return fmt.Sprintf("SubidGenerateResult%v", string(b))
+}
+
+/*
+Match users by any subordinate uid in their range
+*/
+func (c *Client) SubidMatch(
+  criteria string, // A string searched in all relevant object attributes
+  reqArgs *SubidMatchArgs,
+  optArgs *SubidMatchOptionalArgs, // can be nil
+) (*SubidMatchResult, error) {
+  if reqArgs == nil {
+    return nil, fmt.Errorf("reqArgs cannot be nil")
+  }
+  kwp := subidMatchKwParams{
+    SubidMatchArgs: reqArgs,
+    SubidMatchOptionalArgs: optArgs,
+    Version: apiVersion,
+  }
+  req := request{
+    Method: "subid_match",
+    Params: []interface{}{
+      []interface{}{criteria, }, &kwp},
+  }
+  readCloser, e := c.exec(&req)
+  if e != nil {
+    return nil, e
+  }
+  defer readCloser.Close()
+  var res subidMatchResponse
+	if e := json.NewDecoder(readCloser).Decode(&res); e != nil {
+		return nil, e
+	}
+	if res.Error != nil {
+		return nil, res.Error
+	}
+  if res.Result == nil {
+    return nil, fmt.Errorf("missing result in response")
+  }
+  return res.Result, nil
+}
+
+type SubidMatchArgs struct {
+  
+    /*
+SubUID match
+Match value for subordinate user ID
+    */
+    Ipasubuidnumber int `json:"ipasubuidnumber,omitempty"`
+  }
+
+type SubidMatchOptionalArgs struct {
+  
+    /*
+Time Limit
+Time limit of search in seconds (0 is unlimited)
+    */
+    Timelimit *int `json:"timelimit,omitempty"`
+  
+    /*
+Size Limit
+Maximum number of entries returned (0 is unlimited)
+    */
+    Sizelimit *int `json:"sizelimit,omitempty"`
+  
+    /*
+
+Retrieve and print all attributes from the server. Affects command output.
+    */
+    All *bool `json:"all,omitempty"`
+  
+    /*
+
+Print entries as stored on the server. Only affects output format.
+    */
+    Raw *bool `json:"raw,omitempty"`
+  
+    /*
+Primary key only
+Results should contain primary key attribute only ("id")
+    */
+    PkeyOnly *bool `json:"pkey_only,omitempty"`
+  }
+
+type subidMatchKwParams struct {
+  *SubidMatchArgs
+  *SubidMatchOptionalArgs
+
+  /*
+  Automatically set.
+  Used by the server to determine whether to accept the request.
+  */
+  Version string `json:"version"`
+}
+
+type subidMatchResponse struct {
+	Error  *Error      `json:"error"`
+	Result *SubidMatchResult `json:"result"`
+}
+
+type SubidMatchResult struct {
+  
+  
+    /*
+User-friendly description of action performed
+    (optional)
+    */
+    Summary *string `json:"summary,omitempty"`
+  
+    /*
+
+    (required)
+    */
+    Result []interface{} `json:"result,omitempty"`
+  
+    /*
+Number of entries returned
+    (required)
+    */
+    Count int `json:"count,omitempty"`
+  
+    /*
+True if not all results were returned
+    (required)
+    */
+    Truncated bool `json:"truncated,omitempty"`
+  }
+
+func (t *SubidMatchResult) String() string {
+  if t == nil {
+    return "<nil>"
+  }
+  b, e := json.Marshal(t)
+  if e != nil {
+    return fmt.Sprintf("SubidMatchResult[failed json.Marshal: %v]", e)
+  }
+  return fmt.Sprintf("SubidMatchResult%v", string(b))
+}
+
+/*
+Modify a subordinate id.
+*/
+func (c *Client) SubidMod(
+  reqArgs *SubidModArgs,
+  optArgs *SubidModOptionalArgs, // can be nil
+) (*SubidModResult, error) {
+  if reqArgs == nil {
+    return nil, fmt.Errorf("reqArgs cannot be nil")
+  }
+  kwp := subidModKwParams{
+    SubidModArgs: reqArgs,
+    SubidModOptionalArgs: optArgs,
+    Version: apiVersion,
+  }
+  req := request{
+    Method: "subid_mod",
+    Params: []interface{}{
+      []interface{}{}, &kwp},
+  }
+  readCloser, e := c.exec(&req)
+  if e != nil {
+    return nil, e
+  }
+  defer readCloser.Close()
+  var res subidModResponse
+	if e := json.NewDecoder(readCloser).Decode(&res); e != nil {
+		return nil, e
+	}
+	if res.Error != nil {
+		return nil, res.Error
+	}
+  if res.Result == nil {
+    return nil, fmt.Errorf("missing result in response")
+  }
+  return res.Result, nil
+}
+
+type SubidModArgs struct {
+  
+    /*
+Unique ID
+
+    */
+    Ipauniqueid string `json:"ipauniqueid,omitempty"`
+  }
+
+type SubidModOptionalArgs struct {
+  
+    /*
+Description
+Subordinate id description
+    */
+    Description *string `json:"description,omitempty"`
+  
+    /*
+
+Set an attribute to a name/value pair. Format is attr=value.
+For multi-valued attributes, the command replaces the values already present.
+    */
+    Setattr *[]string `json:"setattr,omitempty"`
+  
+    /*
+
+Add an attribute/value pair. Format is attr=value. The attribute
+must be part of the schema.
+    */
+    Addattr *[]string `json:"addattr,omitempty"`
+  
+    /*
+
+Delete an attribute/value pair. The option will be evaluated
+last, after all sets and adds.
+    */
+    Delattr *[]string `json:"delattr,omitempty"`
+  
+    /*
+Rights
+Display the access rights of this entry (requires --all). See ipa man page for details.
+    */
+    Rights *bool `json:"rights,omitempty"`
+  
+    /*
+
+Retrieve and print all attributes from the server. Affects command output.
+    */
+    All *bool `json:"all,omitempty"`
+  
+    /*
+
+Print entries as stored on the server. Only affects output format.
+    */
+    Raw *bool `json:"raw,omitempty"`
+  }
+
+type subidModKwParams struct {
+  *SubidModArgs
+  *SubidModOptionalArgs
+
+  /*
+  Automatically set.
+  Used by the server to determine whether to accept the request.
+  */
+  Version string `json:"version"`
+}
+
+type subidModResponse struct {
+	Error  *Error      `json:"error"`
+	Result *SubidModResult `json:"result"`
+}
+
+type SubidModResult struct {
+  
+  
+    /*
+User-friendly description of action performed
+    (optional)
+    */
+    Summary *string `json:"summary,omitempty"`
+  
+    /*
+
+    (required)
+    */
+    Result Subid `json:"result,omitempty"`
+  
+    /*
+The primary_key value of the entry, e.g. 'jdoe' for a user
+    (required)
+    */
+    Value string `json:"value,omitempty"`
+  }
+
+func (t *SubidModResult) String() string {
+  if t == nil {
+    return "<nil>"
+  }
+  b, e := json.Marshal(t)
+  if e != nil {
+    return fmt.Sprintf("SubidModResult[failed json.Marshal: %v]", e)
+  }
+  return fmt.Sprintf("SubidModResult%v", string(b))
+}
+
+/*
+Display information about a subordinate id.
+*/
+func (c *Client) SubidShow(
+  reqArgs *SubidShowArgs,
+  optArgs *SubidShowOptionalArgs, // can be nil
+) (*SubidShowResult, error) {
+  if reqArgs == nil {
+    return nil, fmt.Errorf("reqArgs cannot be nil")
+  }
+  kwp := subidShowKwParams{
+    SubidShowArgs: reqArgs,
+    SubidShowOptionalArgs: optArgs,
+    Version: apiVersion,
+  }
+  req := request{
+    Method: "subid_show",
+    Params: []interface{}{
+      []interface{}{}, &kwp},
+  }
+  readCloser, e := c.exec(&req)
+  if e != nil {
+    return nil, e
+  }
+  defer readCloser.Close()
+  var res subidShowResponse
+	if e := json.NewDecoder(readCloser).Decode(&res); e != nil {
+		return nil, e
+	}
+	if res.Error != nil {
+		return nil, res.Error
+	}
+  if res.Result == nil {
+    return nil, fmt.Errorf("missing result in response")
+  }
+  return res.Result, nil
+}
+
+type SubidShowArgs struct {
+  
+    /*
+Unique ID
+
+    */
+    Ipauniqueid string `json:"ipauniqueid,omitempty"`
+  }
+
+type SubidShowOptionalArgs struct {
+  
+    /*
+Rights
+Display the access rights of this entry (requires --all). See ipa man page for details.
+    */
+    Rights *bool `json:"rights,omitempty"`
+  
+    /*
+
+Retrieve and print all attributes from the server. Affects command output.
+    */
+    All *bool `json:"all,omitempty"`
+  
+    /*
+
+Print entries as stored on the server. Only affects output format.
+    */
+    Raw *bool `json:"raw,omitempty"`
+  }
+
+type subidShowKwParams struct {
+  *SubidShowArgs
+  *SubidShowOptionalArgs
+
+  /*
+  Automatically set.
+  Used by the server to determine whether to accept the request.
+  */
+  Version string `json:"version"`
+}
+
+type subidShowResponse struct {
+	Error  *Error      `json:"error"`
+	Result *SubidShowResult `json:"result"`
+}
+
+type SubidShowResult struct {
+  
+  
+    /*
+User-friendly description of action performed
+    (optional)
+    */
+    Summary *string `json:"summary,omitempty"`
+  
+    /*
+
+    (required)
+    */
+    Result Subid `json:"result,omitempty"`
+  
+    /*
+The primary_key value of the entry, e.g. 'jdoe' for a user
+    (required)
+    */
+    Value string `json:"value,omitempty"`
+  }
+
+func (t *SubidShowResult) String() string {
+  if t == nil {
+    return "<nil>"
+  }
+  b, e := json.Marshal(t)
+  if e != nil {
+    return fmt.Sprintf("SubidShowResult[failed json.Marshal: %v]", e)
+  }
+  return fmt.Sprintf("SubidShowResult%v", string(b))
+}
+
+/*
+Subordinate id statistics
+*/
+func (c *Client) SubidStats(
+  reqArgs *SubidStatsArgs,
+  optArgs *SubidStatsOptionalArgs, // can be nil
+) (*SubidStatsResult, error) {
+  if reqArgs == nil {
+    return nil, fmt.Errorf("reqArgs cannot be nil")
+  }
+  kwp := subidStatsKwParams{
+    SubidStatsArgs: reqArgs,
+    SubidStatsOptionalArgs: optArgs,
+    Version: apiVersion,
+  }
+  req := request{
+    Method: "subid_stats",
+    Params: []interface{}{
+      []interface{}{}, &kwp},
+  }
+  readCloser, e := c.exec(&req)
+  if e != nil {
+    return nil, e
+  }
+  defer readCloser.Close()
+  var res subidStatsResponse
+	if e := json.NewDecoder(readCloser).Decode(&res); e != nil {
+		return nil, e
+	}
+	if res.Error != nil {
+		return nil, res.Error
+	}
+  if res.Result == nil {
+    return nil, fmt.Errorf("missing result in response")
+  }
+  return res.Result, nil
+}
+
+type SubidStatsArgs struct {
+  }
+
+type SubidStatsOptionalArgs struct {
+  
+    /*
+
+Retrieve and print all attributes from the server. Affects command output.
+    */
+    All *bool `json:"all,omitempty"`
+  
+    /*
+
+Print entries as stored on the server. Only affects output format.
+    */
+    Raw *bool `json:"raw,omitempty"`
+  }
+
+type subidStatsKwParams struct {
+  *SubidStatsArgs
+  *SubidStatsOptionalArgs
+
+  /*
+  Automatically set.
+  Used by the server to determine whether to accept the request.
+  */
+  Version string `json:"version"`
+}
+
+type subidStatsResponse struct {
+	Error  *Error      `json:"error"`
+	Result *SubidStatsResult `json:"result"`
+}
+
+type SubidStatsResult struct {
+  
+  
+    /*
+User-friendly description of action performed
+    (optional)
+    */
+    Summary *string `json:"summary,omitempty"`
+  
+    /*
+
+    (required)
+    */
+    Result interface{} `json:"result,omitempty"`
+  }
+
+func (t *SubidStatsResult) String() string {
+  if t == nil {
+    return "<nil>"
+  }
+  b, e := json.Marshal(t)
+  if e != nil {
+    return fmt.Sprintf("SubidStatsResult[failed json.Marshal: %v]", e)
+  }
+  return fmt.Sprintf("SubidStatsResult%v", string(b))
 }
 
 /*
@@ -62170,6 +63244,18 @@ sudo rule
 Search for users without these member of sudo rules.
     */
     NotInSudorule *[]string `json:"not_in_sudorule,omitempty"`
+  
+    /*
+Subordinate id
+Search for users with these member of Subordinate ids.
+    */
+    InSubid *[]string `json:"in_subid,omitempty"`
+  
+    /*
+Subordinate id
+Search for users without these member of Subordinate ids.
+    */
+    NotInSubid *[]string `json:"not_in_subid,omitempty"`
   }
 
 type userFindKwParams struct {
@@ -72644,6 +73730,12 @@ Default types of supported user authentication
     Ipauserauthtype *[]string `json:"ipauserauthtype,omitempty"`
   
     /*
+Enable adding subids to new users
+Enable adding subids to new users
+    */
+    Ipauserdefaultsubordinateid *bool `json:"ipauserdefaultsubordinateid,omitempty"`
+  
+    /*
 IPA masters
 List of all IPA masters
     */
@@ -72714,6 +73806,24 @@ IPA DNSSec key master
 DNSec key master
     */
     DnssecKeyMasterServer *string `json:"dnssec_key_master_server,omitempty"`
+  
+    /*
+Setup SID configuration
+New users and groups automatically get a SID assigned
+    */
+    EnableSid *bool `json:"enable_sid,omitempty"`
+  
+    /*
+Add SIDs
+Add SIDs for existing users and groups
+    */
+    AddSids *bool `json:"add_sids,omitempty"`
+  
+    /*
+NetBIOS name of the IPA domain
+NetBIOS name of the IPA domain
+    */
+    NetbiosName *string `json:"netbios_name,omitempty"`
   }
 
 func (t *Config) String() string {
@@ -72769,6 +73879,8 @@ type jsonConfig struct {
   
     Ipauserauthtype interface{} `json:"ipauserauthtype"`
   
+    Ipauserdefaultsubordinateid interface{} `json:"ipauserdefaultsubordinateid"`
+  
     IpaMasterServer interface{} `json:"ipa_master_server"`
   
     IpaMasterHiddenServer interface{} `json:"ipa_master_hidden_server"`
@@ -72792,6 +73904,12 @@ type jsonConfig struct {
     DNSServerHiddenServer interface{} `json:"dns_server_hidden_server"`
   
     DnssecKeyMasterServer interface{} `json:"dnssec_key_master_server"`
+  
+    EnableSid interface{} `json:"enable_sid"`
+  
+    AddSids interface{} `json:"add_sids"`
+  
+    NetbiosName interface{} `json:"netbios_name"`
   }
 
 func (out *Config) UnmarshalJSON(data []byte) error {
@@ -73531,6 +74649,43 @@ func (out *Config) UnmarshalJSON(data []byte) error {
     
   }
   
+  if in.Ipauserdefaultsubordinateid != nil {
+    raw := in.Ipauserdefaultsubordinateid
+    plainV, plainOk := raw.(bool)
+    sliceWrapperV, sliceWrapperOk := raw.([]interface{})
+    var sliceV []bool
+    sliceOk := sliceWrapperOk
+    if sliceWrapperOk {
+      for _, rawItem := range sliceWrapperV {
+        
+        itemV, itemOk := rawItem.(bool)
+        
+        if !itemOk {
+          sliceOk = false
+          break
+        }
+        
+        sliceV = append(sliceV, itemV)
+        
+      }
+    }
+    
+      if plainOk {
+        out.Ipauserdefaultsubordinateid = &plainV
+      } else if sliceOk {
+        
+          if len(sliceV) == 1 {
+            out.Ipauserdefaultsubordinateid = &sliceV[0]
+          } else if len(sliceV) > 1 {
+            return fmt.Errorf("unexpected value for field Ipauserdefaultsubordinateid: %v; expected at most one element", raw)
+          }
+        
+      } else {
+        return fmt.Errorf("unexpected value for field Ipauserdefaultsubordinateid: %v (%v)", raw, reflect.TypeOf(raw))
+      }
+    
+  }
+  
   if in.IpaMasterServer != nil {
     raw := in.IpaMasterServer
     plainV, plainOk := raw.(string)
@@ -73926,6 +75081,117 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         
       } else {
         return fmt.Errorf("unexpected value for field DnssecKeyMasterServer: %v (%v)", raw, reflect.TypeOf(raw))
+      }
+    
+  }
+  
+  if in.EnableSid != nil {
+    raw := in.EnableSid
+    plainV, plainOk := raw.(bool)
+    sliceWrapperV, sliceWrapperOk := raw.([]interface{})
+    var sliceV []bool
+    sliceOk := sliceWrapperOk
+    if sliceWrapperOk {
+      for _, rawItem := range sliceWrapperV {
+        
+        itemV, itemOk := rawItem.(bool)
+        
+        if !itemOk {
+          sliceOk = false
+          break
+        }
+        
+        sliceV = append(sliceV, itemV)
+        
+      }
+    }
+    
+      if plainOk {
+        out.EnableSid = &plainV
+      } else if sliceOk {
+        
+          if len(sliceV) == 1 {
+            out.EnableSid = &sliceV[0]
+          } else if len(sliceV) > 1 {
+            return fmt.Errorf("unexpected value for field EnableSid: %v; expected at most one element", raw)
+          }
+        
+      } else {
+        return fmt.Errorf("unexpected value for field EnableSid: %v (%v)", raw, reflect.TypeOf(raw))
+      }
+    
+  }
+  
+  if in.AddSids != nil {
+    raw := in.AddSids
+    plainV, plainOk := raw.(bool)
+    sliceWrapperV, sliceWrapperOk := raw.([]interface{})
+    var sliceV []bool
+    sliceOk := sliceWrapperOk
+    if sliceWrapperOk {
+      for _, rawItem := range sliceWrapperV {
+        
+        itemV, itemOk := rawItem.(bool)
+        
+        if !itemOk {
+          sliceOk = false
+          break
+        }
+        
+        sliceV = append(sliceV, itemV)
+        
+      }
+    }
+    
+      if plainOk {
+        out.AddSids = &plainV
+      } else if sliceOk {
+        
+          if len(sliceV) == 1 {
+            out.AddSids = &sliceV[0]
+          } else if len(sliceV) > 1 {
+            return fmt.Errorf("unexpected value for field AddSids: %v; expected at most one element", raw)
+          }
+        
+      } else {
+        return fmt.Errorf("unexpected value for field AddSids: %v (%v)", raw, reflect.TypeOf(raw))
+      }
+    
+  }
+  
+  if in.NetbiosName != nil {
+    raw := in.NetbiosName
+    plainV, plainOk := raw.(string)
+    sliceWrapperV, sliceWrapperOk := raw.([]interface{})
+    var sliceV []string
+    sliceOk := sliceWrapperOk
+    if sliceWrapperOk {
+      for _, rawItem := range sliceWrapperV {
+        
+        itemV, itemOk := rawItem.(string)
+        
+        if !itemOk {
+          sliceOk = false
+          break
+        }
+        
+        sliceV = append(sliceV, itemV)
+        
+      }
+    }
+    
+      if plainOk {
+        out.NetbiosName = &plainV
+      } else if sliceOk {
+        
+          if len(sliceV) == 1 {
+            out.NetbiosName = &sliceV[0]
+          } else if len(sliceV) > 1 {
+            return fmt.Errorf("unexpected value for field NetbiosName: %v; expected at most one element", raw)
+          }
+        
+      } else {
+        return fmt.Errorf("unexpected value for field NetbiosName: %v (%v)", raw, reflect.TypeOf(raw))
       }
     
   }
@@ -90131,6 +91397,12 @@ Range type
 ID range type, one of allowed values
     */
     Iparangetype *string `json:"iparangetype,omitempty"`
+  
+    /*
+Auto private groups
+Auto creation of private groups, one of allowed values
+    */
+    Ipaautoprivategroups *string `json:"ipaautoprivategroups,omitempty"`
   }
 
 func (t *Idrange) String() string {
@@ -90161,6 +91433,8 @@ type jsonIdrange struct {
     Ipanttrusteddomainname interface{} `json:"ipanttrusteddomainname"`
   
     Iparangetype interface{} `json:"iparangetype"`
+  
+    Ipaautoprivategroups interface{} `json:"ipaautoprivategroups"`
   }
 
 func (out *Idrange) UnmarshalJSON(data []byte) error {
@@ -90474,6 +91748,43 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
         
       } else {
         return fmt.Errorf("unexpected value for field Iparangetype: %v (%v)", raw, reflect.TypeOf(raw))
+      }
+    
+  }
+  
+  if in.Ipaautoprivategroups != nil {
+    raw := in.Ipaautoprivategroups
+    plainV, plainOk := raw.(string)
+    sliceWrapperV, sliceWrapperOk := raw.([]interface{})
+    var sliceV []string
+    sliceOk := sliceWrapperOk
+    if sliceWrapperOk {
+      for _, rawItem := range sliceWrapperV {
+        
+        itemV, itemOk := rawItem.(string)
+        
+        if !itemOk {
+          sliceOk = false
+          break
+        }
+        
+        sliceV = append(sliceV, itemV)
+        
+      }
+    }
+    
+      if plainOk {
+        out.Ipaautoprivategroups = &plainV
+      } else if sliceOk {
+        
+          if len(sliceV) == 1 {
+            out.Ipaautoprivategroups = &sliceV[0]
+          } else if len(sliceV) > 1 {
+            return fmt.Errorf("unexpected value for field Ipaautoprivategroups: %v; expected at most one element", raw)
+          }
+        
+      } else {
+        return fmt.Errorf("unexpected value for field Ipaautoprivategroups: %v (%v)", raw, reflect.TypeOf(raw))
       }
     
   }
@@ -100972,6 +102283,12 @@ Member of HBAC rule
     MemberofHbacrule *[]string `json:"memberof_hbacrule,omitempty"`
   
     /*
+Subordinate ids
+
+    */
+    MemberofSubid *[]string `json:"memberof_subid,omitempty"`
+  
+    /*
 Indirect Member of group
 
     */
@@ -101126,6 +102443,8 @@ type jsonStageuser struct {
     MemberofSudorule interface{} `json:"memberof_sudorule"`
   
     MemberofHbacrule interface{} `json:"memberof_hbacrule"`
+  
+    MemberofSubid interface{} `json:"memberof_subid"`
   
     MemberofindirectGroup interface{} `json:"memberofindirect_group"`
   
@@ -103016,6 +104335,38 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
     
   }
   
+  if in.MemberofSubid != nil {
+    raw := in.MemberofSubid
+    plainV, plainOk := raw.(string)
+    sliceWrapperV, sliceWrapperOk := raw.([]interface{})
+    var sliceV []string
+    sliceOk := sliceWrapperOk
+    if sliceWrapperOk {
+      for _, rawItem := range sliceWrapperV {
+        
+        itemV, itemOk := rawItem.(string)
+        
+        if !itemOk {
+          sliceOk = false
+          break
+        }
+        
+        sliceV = append(sliceV, itemV)
+        
+      }
+    }
+    
+      if plainOk {
+        out.MemberofSubid = &[]string{plainV}
+      } else if sliceOk {
+        
+        out.MemberofSubid = &sliceV
+      } else {
+        return fmt.Errorf("unexpected value for field MemberofSubid: %v (%v)", raw, reflect.TypeOf(raw))
+      }
+    
+  }
+  
   if in.MemberofindirectGroup != nil {
     raw := in.MemberofindirectGroup
     plainV, plainOk := raw.(string)
@@ -103234,6 +104585,360 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         
       } else {
         return fmt.Errorf("unexpected value for field HasKeytab: %v (%v)", raw, reflect.TypeOf(raw))
+      }
+    
+  }
+  return nil
+}
+
+type Subid struct {
+  
+    /*
+Unique ID
+
+    */
+    Ipauniqueid string `json:"ipauniqueid,omitempty"`
+  
+    /*
+Description
+Subordinate id description
+    */
+    Description *string `json:"description,omitempty"`
+  
+    /*
+Owner
+Owning user of subordinate id entry
+    */
+    Ipaowner string `json:"ipaowner,omitempty"`
+  
+    /*
+SubUID range start
+Start value for subordinate user ID (subuid) range
+    */
+    Ipasubuidnumber *int `json:"ipasubuidnumber,omitempty"`
+  
+    /*
+SubUID range size
+Subordinate user ID count
+    */
+    Ipasubuidcount *int `json:"ipasubuidcount,omitempty"`
+  
+    /*
+SubGID range start
+Start value for subordinate group ID (subgid) range
+    */
+    Ipasubgidnumber *int `json:"ipasubgidnumber,omitempty"`
+  
+    /*
+SubGID range size
+Subordinate group ID count
+    */
+    Ipasubgidcount *int `json:"ipasubgidcount,omitempty"`
+  }
+
+func (t *Subid) String() string {
+  if t == nil {
+    return "<nil>"
+  }
+  b, e := json.Marshal(t)
+  if e != nil {
+    return fmt.Sprintf("Subid[failed json.Marshal: %v]", e)
+  }
+  return fmt.Sprintf("Subid%v", string(b))
+}
+
+type jsonSubid struct {
+  
+    Ipauniqueid interface{} `json:"ipauniqueid"`
+  
+    Description interface{} `json:"description"`
+  
+    Ipaowner interface{} `json:"ipaowner"`
+  
+    Ipasubuidnumber interface{} `json:"ipasubuidnumber"`
+  
+    Ipasubuidcount interface{} `json:"ipasubuidcount"`
+  
+    Ipasubgidnumber interface{} `json:"ipasubgidnumber"`
+  
+    Ipasubgidcount interface{} `json:"ipasubgidcount"`
+  }
+
+func (out *Subid) UnmarshalJSON(data []byte) error {
+  var in jsonSubid
+  if e := json.Unmarshal(data, &in); e != nil {
+    return e
+  }
+  
+  if true {
+    raw := in.Ipauniqueid
+    plainV, plainOk := raw.(string)
+    sliceWrapperV, sliceWrapperOk := raw.([]interface{})
+    var sliceV []string
+    sliceOk := sliceWrapperOk
+    if sliceWrapperOk {
+      for _, rawItem := range sliceWrapperV {
+        
+        itemV, itemOk := rawItem.(string)
+        
+        if !itemOk {
+          sliceOk = false
+          break
+        }
+        
+        sliceV = append(sliceV, itemV)
+        
+      }
+    }
+    
+      if plainOk {
+        out.Ipauniqueid = plainV
+      } else if sliceOk {
+        
+          if len(sliceV) != 1 {
+            return fmt.Errorf("unexpected value for field Ipauniqueid: %v; expected exactly one element", raw)
+          }
+          out.Ipauniqueid = sliceV[0]
+        
+      } else {
+        return fmt.Errorf("unexpected value for field Ipauniqueid: %v (%v)", raw, reflect.TypeOf(raw))
+      }
+    
+  }
+  
+  if in.Description != nil {
+    raw := in.Description
+    plainV, plainOk := raw.(string)
+    sliceWrapperV, sliceWrapperOk := raw.([]interface{})
+    var sliceV []string
+    sliceOk := sliceWrapperOk
+    if sliceWrapperOk {
+      for _, rawItem := range sliceWrapperV {
+        
+        itemV, itemOk := rawItem.(string)
+        
+        if !itemOk {
+          sliceOk = false
+          break
+        }
+        
+        sliceV = append(sliceV, itemV)
+        
+      }
+    }
+    
+      if plainOk {
+        out.Description = &plainV
+      } else if sliceOk {
+        
+          if len(sliceV) == 1 {
+            out.Description = &sliceV[0]
+          } else if len(sliceV) > 1 {
+            return fmt.Errorf("unexpected value for field Description: %v; expected at most one element", raw)
+          }
+        
+      } else {
+        return fmt.Errorf("unexpected value for field Description: %v (%v)", raw, reflect.TypeOf(raw))
+      }
+    
+  }
+  
+  if true {
+    raw := in.Ipaowner
+    plainV, plainOk := raw.(string)
+    sliceWrapperV, sliceWrapperOk := raw.([]interface{})
+    var sliceV []string
+    sliceOk := sliceWrapperOk
+    if sliceWrapperOk {
+      for _, rawItem := range sliceWrapperV {
+        
+        itemV, itemOk := rawItem.(string)
+        
+        if !itemOk {
+          sliceOk = false
+          break
+        }
+        
+        sliceV = append(sliceV, itemV)
+        
+      }
+    }
+    
+      if plainOk {
+        out.Ipaowner = plainV
+      } else if sliceOk {
+        
+          if len(sliceV) != 1 {
+            return fmt.Errorf("unexpected value for field Ipaowner: %v; expected exactly one element", raw)
+          }
+          out.Ipaowner = sliceV[0]
+        
+      } else {
+        return fmt.Errorf("unexpected value for field Ipaowner: %v (%v)", raw, reflect.TypeOf(raw))
+      }
+    
+  }
+  
+  if in.Ipasubuidnumber != nil {
+    raw := in.Ipasubuidnumber
+    plainV, plainOk := raw.(int)
+    sliceWrapperV, sliceWrapperOk := raw.([]interface{})
+    var sliceV []int
+    sliceOk := sliceWrapperOk
+    if sliceWrapperOk {
+      for _, rawItem := range sliceWrapperV {
+        
+        itemV, itemOk := rawItem.(string)
+        
+        if !itemOk {
+          sliceOk = false
+          break
+        }
+        
+        intV, e := strconv.Atoi(itemV)
+        if e != nil {
+          return fmt.Errorf("unexpected value for field Ipasubuidnumber: %v (hit string which couldn't be converted to int)", raw)
+        }
+        sliceV = append(sliceV, intV)
+        
+      }
+    }
+    
+      if plainOk {
+        out.Ipasubuidnumber = &plainV
+      } else if sliceOk {
+        
+          if len(sliceV) == 1 {
+            out.Ipasubuidnumber = &sliceV[0]
+          } else if len(sliceV) > 1 {
+            return fmt.Errorf("unexpected value for field Ipasubuidnumber: %v; expected at most one element", raw)
+          }
+        
+      } else {
+        return fmt.Errorf("unexpected value for field Ipasubuidnumber: %v (%v)", raw, reflect.TypeOf(raw))
+      }
+    
+  }
+  
+  if in.Ipasubuidcount != nil {
+    raw := in.Ipasubuidcount
+    plainV, plainOk := raw.(int)
+    sliceWrapperV, sliceWrapperOk := raw.([]interface{})
+    var sliceV []int
+    sliceOk := sliceWrapperOk
+    if sliceWrapperOk {
+      for _, rawItem := range sliceWrapperV {
+        
+        itemV, itemOk := rawItem.(string)
+        
+        if !itemOk {
+          sliceOk = false
+          break
+        }
+        
+        intV, e := strconv.Atoi(itemV)
+        if e != nil {
+          return fmt.Errorf("unexpected value for field Ipasubuidcount: %v (hit string which couldn't be converted to int)", raw)
+        }
+        sliceV = append(sliceV, intV)
+        
+      }
+    }
+    
+      if plainOk {
+        out.Ipasubuidcount = &plainV
+      } else if sliceOk {
+        
+          if len(sliceV) == 1 {
+            out.Ipasubuidcount = &sliceV[0]
+          } else if len(sliceV) > 1 {
+            return fmt.Errorf("unexpected value for field Ipasubuidcount: %v; expected at most one element", raw)
+          }
+        
+      } else {
+        return fmt.Errorf("unexpected value for field Ipasubuidcount: %v (%v)", raw, reflect.TypeOf(raw))
+      }
+    
+  }
+  
+  if in.Ipasubgidnumber != nil {
+    raw := in.Ipasubgidnumber
+    plainV, plainOk := raw.(int)
+    sliceWrapperV, sliceWrapperOk := raw.([]interface{})
+    var sliceV []int
+    sliceOk := sliceWrapperOk
+    if sliceWrapperOk {
+      for _, rawItem := range sliceWrapperV {
+        
+        itemV, itemOk := rawItem.(string)
+        
+        if !itemOk {
+          sliceOk = false
+          break
+        }
+        
+        intV, e := strconv.Atoi(itemV)
+        if e != nil {
+          return fmt.Errorf("unexpected value for field Ipasubgidnumber: %v (hit string which couldn't be converted to int)", raw)
+        }
+        sliceV = append(sliceV, intV)
+        
+      }
+    }
+    
+      if plainOk {
+        out.Ipasubgidnumber = &plainV
+      } else if sliceOk {
+        
+          if len(sliceV) == 1 {
+            out.Ipasubgidnumber = &sliceV[0]
+          } else if len(sliceV) > 1 {
+            return fmt.Errorf("unexpected value for field Ipasubgidnumber: %v; expected at most one element", raw)
+          }
+        
+      } else {
+        return fmt.Errorf("unexpected value for field Ipasubgidnumber: %v (%v)", raw, reflect.TypeOf(raw))
+      }
+    
+  }
+  
+  if in.Ipasubgidcount != nil {
+    raw := in.Ipasubgidcount
+    plainV, plainOk := raw.(int)
+    sliceWrapperV, sliceWrapperOk := raw.([]interface{})
+    var sliceV []int
+    sliceOk := sliceWrapperOk
+    if sliceWrapperOk {
+      for _, rawItem := range sliceWrapperV {
+        
+        itemV, itemOk := rawItem.(string)
+        
+        if !itemOk {
+          sliceOk = false
+          break
+        }
+        
+        intV, e := strconv.Atoi(itemV)
+        if e != nil {
+          return fmt.Errorf("unexpected value for field Ipasubgidcount: %v (hit string which couldn't be converted to int)", raw)
+        }
+        sliceV = append(sliceV, intV)
+        
+      }
+    }
+    
+      if plainOk {
+        out.Ipasubgidcount = &plainV
+      } else if sliceOk {
+        
+          if len(sliceV) == 1 {
+            out.Ipasubgidcount = &sliceV[0]
+          } else if len(sliceV) > 1 {
+            return fmt.Errorf("unexpected value for field Ipasubgidcount: %v; expected at most one element", raw)
+          }
+        
+      } else {
+        return fmt.Errorf("unexpected value for field Ipasubgidcount: %v (%v)", raw, reflect.TypeOf(raw))
       }
     
   }
@@ -107016,6 +108721,12 @@ Member of HBAC rule
     MemberofHbacrule *[]string `json:"memberof_hbacrule,omitempty"`
   
     /*
+Subordinate ids
+
+    */
+    MemberofSubid *[]string `json:"memberof_subid,omitempty"`
+  
+    /*
 Indirect Member of group
 
     */
@@ -107174,6 +108885,8 @@ type jsonUser struct {
     MemberofSudorule interface{} `json:"memberof_sudorule"`
   
     MemberofHbacrule interface{} `json:"memberof_hbacrule"`
+  
+    MemberofSubid interface{} `json:"memberof_subid"`
   
     MemberofindirectGroup interface{} `json:"memberofindirect_group"`
   
@@ -109136,6 +110849,38 @@ func (out *User) UnmarshalJSON(data []byte) error {
         out.MemberofHbacrule = &sliceV
       } else {
         return fmt.Errorf("unexpected value for field MemberofHbacrule: %v (%v)", raw, reflect.TypeOf(raw))
+      }
+    
+  }
+  
+  if in.MemberofSubid != nil {
+    raw := in.MemberofSubid
+    plainV, plainOk := raw.(string)
+    sliceWrapperV, sliceWrapperOk := raw.([]interface{})
+    var sliceV []string
+    sliceOk := sliceWrapperOk
+    if sliceWrapperOk {
+      for _, rawItem := range sliceWrapperV {
+        
+        itemV, itemOk := rawItem.(string)
+        
+        if !itemOk {
+          sliceOk = false
+          break
+        }
+        
+        sliceV = append(sliceV, itemV)
+        
+      }
+    }
+    
+      if plainOk {
+        out.MemberofSubid = &[]string{plainV}
+      } else if sliceOk {
+        
+        out.MemberofSubid = &sliceV
+      } else {
+        return fmt.Errorf("unexpected value for field MemberofSubid: %v (%v)", raw, reflect.TypeOf(raw))
       }
     
   }
