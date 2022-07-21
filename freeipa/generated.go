@@ -67381,7 +67381,9 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Aciname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -67391,8 +67393,15 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -67417,7 +67426,9 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
   
   if in.Permission != nil {
     raw := in.Permission
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -67427,8 +67438,15 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -67454,7 +67472,9 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
   
   if in.Group != nil {
     raw := in.Group
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -67464,8 +67484,15 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -67491,7 +67518,9 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Permissions
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -67501,8 +67530,15 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -67527,7 +67563,9 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
   
   if in.Attrs != nil {
     raw := in.Attrs
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -67537,8 +67575,15 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -67559,7 +67604,9 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
   
   if in.Type != nil {
     raw := in.Type
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -67569,8 +67616,15 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -67596,7 +67650,9 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
   
   if in.Memberof != nil {
     raw := in.Memberof
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -67606,8 +67662,15 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -67633,7 +67696,9 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
   
   if in.Filter != nil {
     raw := in.Filter
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -67643,8 +67708,15 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -67670,7 +67742,9 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
   
   if in.Subtree != nil {
     raw := in.Subtree
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -67680,8 +67754,15 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -67707,7 +67788,9 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
   
   if in.Targetgroup != nil {
     raw := in.Targetgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -67717,8 +67800,15 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -67744,7 +67834,9 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
   
   if in.Selfaci != nil {
     raw := in.Selfaci
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -67754,8 +67846,15 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -67781,7 +67880,9 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Aciprefix
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -67791,8 +67892,15 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -67817,7 +67925,9 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Aci
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -67827,8 +67937,15 @@ func (out *Aci) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -67918,7 +68035,9 @@ func (out *Automember) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -67928,8 +68047,15 @@ func (out *Automember) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -67954,7 +68080,9 @@ func (out *Automember) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -67964,8 +68092,15 @@ func (out *Automember) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -67991,7 +68126,9 @@ func (out *Automember) UnmarshalJSON(data []byte) error {
   
   if in.Automemberdefaultgroup != nil {
     raw := in.Automemberdefaultgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -68001,8 +68138,15 @@ func (out *Automember) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -68028,7 +68172,9 @@ func (out *Automember) UnmarshalJSON(data []byte) error {
   
   if in.Automemberinclusiveregex != nil {
     raw := in.Automemberinclusiveregex
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -68038,8 +68184,15 @@ func (out *Automember) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -68060,7 +68213,9 @@ func (out *Automember) UnmarshalJSON(data []byte) error {
   
   if in.Automemberexclusiveregex != nil {
     raw := in.Automemberexclusiveregex
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -68070,8 +68225,15 @@ func (out *Automember) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -68149,7 +68311,9 @@ func (out *AutomemberDefaultGroup) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -68159,8 +68323,15 @@ func (out *AutomemberDefaultGroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -68186,7 +68357,9 @@ func (out *AutomemberDefaultGroup) UnmarshalJSON(data []byte) error {
   
   if in.Automemberdefaultgroup != nil {
     raw := in.Automemberdefaultgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -68196,8 +68369,15 @@ func (out *AutomemberDefaultGroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -68223,7 +68403,9 @@ func (out *AutomemberDefaultGroup) UnmarshalJSON(data []byte) error {
   
   if in.Automemberinclusiveregex != nil {
     raw := in.Automemberinclusiveregex
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -68233,8 +68415,15 @@ func (out *AutomemberDefaultGroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -68255,7 +68444,9 @@ func (out *AutomemberDefaultGroup) UnmarshalJSON(data []byte) error {
   
   if in.Automemberexclusiveregex != nil {
     raw := in.Automemberexclusiveregex
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -68265,8 +68456,15 @@ func (out *AutomemberDefaultGroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -68320,7 +68518,9 @@ func (out *AutomemberTask) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Dn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -68330,8 +68530,15 @@ func (out *AutomemberTask) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -68405,7 +68612,9 @@ func (out *Automountkey) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Automountkey
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -68415,8 +68624,15 @@ func (out *Automountkey) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -68441,7 +68657,9 @@ func (out *Automountkey) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Automountinformation
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -68451,8 +68669,15 @@ func (out *Automountkey) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -68477,7 +68702,9 @@ func (out *Automountkey) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -68487,8 +68714,15 @@ func (out *Automountkey) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -68547,7 +68781,9 @@ func (out *Automountlocation) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -68557,8 +68793,15 @@ func (out *Automountlocation) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -68624,7 +68867,9 @@ func (out *Automountmap) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Automountmapname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -68634,8 +68879,15 @@ func (out *Automountmap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -68660,7 +68912,9 @@ func (out *Automountmap) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -68670,8 +68924,15 @@ func (out *Automountmap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -68778,7 +69039,9 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -68788,8 +69051,15 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -68814,7 +69084,9 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -68824,8 +69096,15 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -68851,7 +69130,9 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipacaid
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -68861,8 +69142,15 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -68887,7 +69175,9 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipacasubjectdn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -68897,8 +69187,15 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -68923,7 +69220,9 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipacaissuerdn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -68933,8 +69232,15 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -68959,7 +69265,9 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Certificate
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -68969,8 +69277,15 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -68995,7 +69310,9 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
   
   if in.CertificateChain != nil {
     raw := in.CertificateChain
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -69005,8 +69322,15 @@ func (out *Ca) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -69172,7 +69496,9 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -69182,8 +69508,15 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -69208,7 +69541,9 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -69218,8 +69553,15 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -69245,7 +69587,9 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
   
   if in.Ipaenabledflag != nil {
     raw := in.Ipaenabledflag
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -69255,8 +69599,15 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -69282,7 +69633,9 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
   
   if in.Ipacacategory != nil {
     raw := in.Ipacacategory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -69292,8 +69645,15 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -69319,7 +69679,9 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
   
   if in.Ipacertprofilecategory != nil {
     raw := in.Ipacertprofilecategory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -69329,8 +69691,15 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -69356,7 +69725,9 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
   
   if in.Usercategory != nil {
     raw := in.Usercategory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -69366,8 +69737,15 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -69393,7 +69771,9 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
   
   if in.Hostcategory != nil {
     raw := in.Hostcategory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -69403,8 +69783,15 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -69430,7 +69817,9 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
   
   if in.Servicecategory != nil {
     raw := in.Servicecategory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -69440,8 +69829,15 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -69467,7 +69863,9 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
   
   if in.IpamembercaCa != nil {
     raw := in.IpamembercaCa
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -69477,8 +69875,15 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -69504,7 +69909,9 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
   
   if in.IpamembercertprofileCertprofile != nil {
     raw := in.IpamembercertprofileCertprofile
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -69514,8 +69921,15 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -69541,7 +69955,9 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
   
   if in.MemberuserUser != nil {
     raw := in.MemberuserUser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -69551,8 +69967,15 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -69578,7 +70001,9 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
   
   if in.MemberuserGroup != nil {
     raw := in.MemberuserGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -69588,8 +70013,15 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -69615,7 +70047,9 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
   
   if in.MemberhostHost != nil {
     raw := in.MemberhostHost
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -69625,8 +70059,15 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -69652,7 +70093,9 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
   
   if in.MemberhostHostgroup != nil {
     raw := in.MemberhostHostgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -69662,8 +70105,15 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -69689,7 +70139,9 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
   
   if in.MemberserviceService != nil {
     raw := in.MemberserviceService
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -69699,8 +70151,15 @@ func (out *Caacl) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -69864,7 +70323,7 @@ Serial number (hex)
 Status
 
     */
-    Status string `json:"status,omitempty"`
+    Status *string `json:"status,omitempty"`
   
     /*
 Revoked
@@ -69876,7 +70335,7 @@ Revoked
 Revocation reason
 Reason for revoking the certificate (0-10). Type "ipa help cert" for revocation reason details. 
     */
-    RevocationReason int `json:"revocation_reason,omitempty"`
+    RevocationReason *int `json:"revocation_reason,omitempty"`
   
     /*
 Owner user
@@ -69975,7 +70434,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if in.Cacn != nil {
     raw := in.Cacn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -69985,8 +70446,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70012,7 +70480,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Certificate
+    
     plainV, plainOk := raw.(interface{})
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []interface{}
     sliceOk := sliceWrapperOk
@@ -70022,8 +70492,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(interface{})
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(interface{}))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70048,7 +70525,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if in.CertificateChain != nil {
     raw := in.CertificateChain
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -70058,8 +70537,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70080,7 +70566,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Subject
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -70090,8 +70578,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70116,7 +70611,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if in.SanRfc822name != nil {
     raw := in.SanRfc822name
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -70126,8 +70623,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70148,7 +70652,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if in.SanDnsname != nil {
     raw := in.SanDnsname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -70158,8 +70664,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70180,7 +70693,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if in.SanX400address != nil {
     raw := in.SanX400address
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -70190,8 +70705,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70212,7 +70734,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if in.SanDirectoryname != nil {
     raw := in.SanDirectoryname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -70222,8 +70746,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70244,7 +70775,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if in.SanEdipartyname != nil {
     raw := in.SanEdipartyname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -70254,8 +70787,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70276,7 +70816,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if in.SanURI != nil {
     raw := in.SanURI
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -70286,8 +70828,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70308,7 +70857,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if in.SanIpaddress != nil {
     raw := in.SanIpaddress
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -70318,8 +70869,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70340,7 +70898,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if in.SanOid != nil {
     raw := in.SanOid
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -70350,8 +70910,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70372,7 +70939,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if in.SanOtherUpn != nil {
     raw := in.SanOtherUpn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -70382,8 +70951,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70404,7 +70980,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if in.SanOtherKpn != nil {
     raw := in.SanOtherKpn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -70414,8 +70992,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70436,7 +71021,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if in.SanOther != nil {
     raw := in.SanOther
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -70446,8 +71033,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70468,7 +71062,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Issuer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -70478,8 +71074,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70504,7 +71107,17 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.ValidNotBefore
-    plainV, plainOk := raw.(time.Time)
+    
+    stringV, stringOk := raw.(string)
+    plainOk := true
+    plainV, plainErr := time.Parse(fmt.Sprintf("%s %s", time.ANSIC, "MST"), stringV)
+    if !stringOk {
+      plainOk = false
+    }
+    if plainErr != nil {
+      plainOk = false
+    }
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []time.Time
     sliceOk := sliceWrapperOk
@@ -70514,8 +71127,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(time.Time)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(time.Time))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70540,7 +71160,17 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.ValidNotAfter
-    plainV, plainOk := raw.(time.Time)
+    
+    stringV, stringOk := raw.(string)
+    plainOk := true
+    plainV, plainErr := time.Parse(fmt.Sprintf("%s %s", time.ANSIC, "MST"), stringV)
+    if !stringOk {
+      plainOk = false
+    }
+    if plainErr != nil {
+      plainOk = false
+    }
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []time.Time
     sliceOk := sliceWrapperOk
@@ -70550,8 +71180,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(time.Time)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(time.Time))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70576,7 +71213,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Sha1Fingerprint
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -70586,8 +71225,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70612,7 +71258,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Sha256Fingerprint
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -70622,8 +71270,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70648,7 +71303,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.SerialNumber
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -70658,8 +71321,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -70688,7 +71358,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.SerialNumberHex
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -70698,8 +71370,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70722,9 +71401,11 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
     
   }
   
-  if true {
+  if in.Status != nil {
     raw := in.Status
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -70734,8 +71415,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70744,13 +71432,14 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.Status = plainV
+        out.Status = &plainV
       } else if sliceOk {
         
-          if len(sliceV) != 1 {
-            return fmt.Errorf("unexpected value for field Status: %v; expected exactly one element", raw)
+          if len(sliceV) == 1 {
+            out.Status = &sliceV[0]
+          } else if len(sliceV) > 1 {
+            return fmt.Errorf("unexpected value for field Status: %v; expected at most one element", raw)
           }
-          out.Status = sliceV[0]
         
       } else {
         return fmt.Errorf("unexpected value for field Status: %v (%v)", raw, reflect.TypeOf(raw))
@@ -70760,7 +71449,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if in.Revoked != nil {
     raw := in.Revoked
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -70770,8 +71461,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70795,9 +71493,17 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
     
   }
   
-  if true {
+  if in.RevocationReason != nil {
     raw := in.RevocationReason
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -70807,8 +71513,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -70821,13 +71534,14 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
     }
     
       if plainOk {
-        out.RevocationReason = plainV
+        out.RevocationReason = &plainV
       } else if sliceOk {
         
-          if len(sliceV) != 1 {
-            return fmt.Errorf("unexpected value for field RevocationReason: %v; expected exactly one element", raw)
+          if len(sliceV) == 1 {
+            out.RevocationReason = &sliceV[0]
+          } else if len(sliceV) > 1 {
+            return fmt.Errorf("unexpected value for field RevocationReason: %v; expected at most one element", raw)
           }
-          out.RevocationReason = sliceV[0]
         
       } else {
         return fmt.Errorf("unexpected value for field RevocationReason: %v (%v)", raw, reflect.TypeOf(raw))
@@ -70837,7 +71551,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if in.OwnerUser != nil {
     raw := in.OwnerUser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -70847,8 +71563,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70869,7 +71592,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if in.OwnerHost != nil {
     raw := in.OwnerHost
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -70879,8 +71604,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70901,7 +71633,9 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
   
   if in.OwnerService != nil {
     raw := in.OwnerService
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -70911,8 +71645,15 @@ func (out *Cert) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -70974,7 +71715,9 @@ func (out *Certmap) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Domain
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -70984,8 +71727,15 @@ func (out *Certmap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -71010,7 +71760,9 @@ func (out *Certmap) UnmarshalJSON(data []byte) error {
   
   if in.UID != nil {
     raw := in.UID
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -71020,8 +71772,15 @@ func (out *Certmap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -71075,7 +71834,9 @@ func (out *Certmapconfig) UnmarshalJSON(data []byte) error {
   
   if in.Ipacertmappromptusername != nil {
     raw := in.Ipacertmappromptusername
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -71085,8 +71846,15 @@ func (out *Certmapconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -71193,7 +71961,9 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -71203,8 +71973,15 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -71229,7 +72006,9 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -71239,8 +72018,15 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -71266,7 +72052,9 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
   
   if in.Ipacertmapmaprule != nil {
     raw := in.Ipacertmapmaprule
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -71276,8 +72064,15 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -71303,7 +72098,9 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
   
   if in.Ipacertmapmatchrule != nil {
     raw := in.Ipacertmapmatchrule
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -71313,8 +72110,15 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -71340,7 +72144,9 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
   
   if in.Associateddomain != nil {
     raw := in.Associateddomain
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -71350,8 +72156,15 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -71372,7 +72185,15 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
   
   if in.Ipacertmappriority != nil {
     raw := in.Ipacertmappriority
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -71382,8 +72203,15 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -71413,7 +72241,9 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
   
   if in.Ipaenabledflag != nil {
     raw := in.Ipaenabledflag
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -71423,8 +72253,15 @@ func (out *Certmaprule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -71507,7 +72344,9 @@ func (out *Certprofile) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -71517,8 +72356,15 @@ func (out *Certprofile) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -71543,7 +72389,9 @@ func (out *Certprofile) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Config
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -71553,8 +72401,15 @@ func (out *Certprofile) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -71579,7 +72434,9 @@ func (out *Certprofile) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -71589,8 +72446,15 @@ func (out *Certprofile) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -71615,7 +72479,9 @@ func (out *Certprofile) UnmarshalJSON(data []byte) error {
   
   if in.Ipacertprofilestoreissued != nil {
     raw := in.Ipacertprofilestoreissued
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -71625,8 +72491,15 @@ func (out *Certprofile) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -71885,7 +72758,9 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if in.Cacn != nil {
     raw := in.Cacn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -71895,8 +72770,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -71922,7 +72804,9 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Certificate
+    
     plainV, plainOk := raw.(interface{})
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []interface{}
     sliceOk := sliceWrapperOk
@@ -71932,8 +72816,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(interface{})
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(interface{}))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -71958,7 +72849,9 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if in.CertificateChain != nil {
     raw := in.CertificateChain
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -71968,8 +72861,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -71990,7 +72890,9 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Subject
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72000,8 +72902,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72026,7 +72935,9 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if in.SanRfc822name != nil {
     raw := in.SanRfc822name
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72036,8 +72947,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72058,7 +72976,9 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if in.SanDnsname != nil {
     raw := in.SanDnsname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72068,8 +72988,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72090,7 +73017,9 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if in.SanX400address != nil {
     raw := in.SanX400address
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72100,8 +73029,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72122,7 +73058,9 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if in.SanDirectoryname != nil {
     raw := in.SanDirectoryname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72132,8 +73070,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72154,7 +73099,9 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if in.SanEdipartyname != nil {
     raw := in.SanEdipartyname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72164,8 +73111,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72186,7 +73140,9 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if in.SanURI != nil {
     raw := in.SanURI
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72196,8 +73152,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72218,7 +73181,9 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if in.SanIpaddress != nil {
     raw := in.SanIpaddress
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72228,8 +73193,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72250,7 +73222,9 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if in.SanOid != nil {
     raw := in.SanOid
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72260,8 +73234,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72282,7 +73263,9 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if in.SanOtherUpn != nil {
     raw := in.SanOtherUpn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72292,8 +73275,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72314,7 +73304,9 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if in.SanOtherKpn != nil {
     raw := in.SanOtherKpn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72324,8 +73316,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72346,7 +73345,9 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if in.SanOther != nil {
     raw := in.SanOther
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72356,8 +73357,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72378,7 +73386,9 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Issuer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72388,8 +73398,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72414,7 +73431,17 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.ValidNotBefore
-    plainV, plainOk := raw.(time.Time)
+    
+    stringV, stringOk := raw.(string)
+    plainOk := true
+    plainV, plainErr := time.Parse(fmt.Sprintf("%s %s", time.ANSIC, "MST"), stringV)
+    if !stringOk {
+      plainOk = false
+    }
+    if plainErr != nil {
+      plainOk = false
+    }
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []time.Time
     sliceOk := sliceWrapperOk
@@ -72424,8 +73451,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(time.Time)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(time.Time))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72450,7 +73484,17 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.ValidNotAfter
-    plainV, plainOk := raw.(time.Time)
+    
+    stringV, stringOk := raw.(string)
+    plainOk := true
+    plainV, plainErr := time.Parse(fmt.Sprintf("%s %s", time.ANSIC, "MST"), stringV)
+    if !stringOk {
+      plainOk = false
+    }
+    if plainErr != nil {
+      plainOk = false
+    }
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []time.Time
     sliceOk := sliceWrapperOk
@@ -72460,8 +73504,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(time.Time)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(time.Time))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72486,7 +73537,9 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Sha1Fingerprint
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72496,8 +73549,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72522,7 +73582,9 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Sha256Fingerprint
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72532,8 +73594,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72558,7 +73627,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.SerialNumber
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -72568,8 +73645,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -72598,7 +73682,9 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.SerialNumberHex
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72608,8 +73694,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72634,7 +73727,9 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.RequestType
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72644,8 +73739,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72670,7 +73772,9 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if in.ProfileID != nil {
     raw := in.ProfileID
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72680,8 +73784,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72707,7 +73818,9 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.CertRequestStatus
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72717,8 +73830,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72743,7 +73863,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.RequestID
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -72753,8 +73881,15 @@ func (out *Certreq) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -72872,7 +74007,9 @@ func (out *Class) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Name
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72882,8 +74019,15 @@ func (out *Class) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72908,7 +74052,9 @@ func (out *Class) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Version
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72918,8 +74064,15 @@ func (out *Class) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72944,7 +74097,9 @@ func (out *Class) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.FullName
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72954,8 +74109,15 @@ func (out *Class) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -72980,7 +74142,9 @@ func (out *Class) UnmarshalJSON(data []byte) error {
   
   if in.Doc != nil {
     raw := in.Doc
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -72990,8 +74154,15 @@ func (out *Class) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -73017,7 +74188,9 @@ func (out *Class) UnmarshalJSON(data []byte) error {
   
   if in.Exclude != nil {
     raw := in.Exclude
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -73027,8 +74200,15 @@ func (out *Class) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -73049,7 +74229,9 @@ func (out *Class) UnmarshalJSON(data []byte) error {
   
   if in.Include != nil {
     raw := in.Include
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -73059,8 +74241,15 @@ func (out *Class) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -73081,7 +74270,9 @@ func (out *Class) UnmarshalJSON(data []byte) error {
   
   if in.TopicTopic != nil {
     raw := in.TopicTopic
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -73091,8 +74282,15 @@ func (out *Class) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -73118,7 +74316,9 @@ func (out *Class) UnmarshalJSON(data []byte) error {
   
   if in.ParamsParam != nil {
     raw := in.ParamsParam
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -73128,8 +74328,15 @@ func (out *Class) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -73255,7 +74462,9 @@ func (out *Command) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Name
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -73265,8 +74474,15 @@ func (out *Command) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -73291,7 +74507,9 @@ func (out *Command) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Version
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -73301,8 +74519,15 @@ func (out *Command) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -73327,7 +74552,9 @@ func (out *Command) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.FullName
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -73337,8 +74564,15 @@ func (out *Command) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -73363,7 +74597,9 @@ func (out *Command) UnmarshalJSON(data []byte) error {
   
   if in.Doc != nil {
     raw := in.Doc
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -73373,8 +74609,15 @@ func (out *Command) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -73400,7 +74643,9 @@ func (out *Command) UnmarshalJSON(data []byte) error {
   
   if in.Exclude != nil {
     raw := in.Exclude
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -73410,8 +74655,15 @@ func (out *Command) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -73432,7 +74684,9 @@ func (out *Command) UnmarshalJSON(data []byte) error {
   
   if in.Include != nil {
     raw := in.Include
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -73442,8 +74696,15 @@ func (out *Command) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -73464,7 +74725,9 @@ func (out *Command) UnmarshalJSON(data []byte) error {
   
   if in.TopicTopic != nil {
     raw := in.TopicTopic
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -73474,8 +74737,15 @@ func (out *Command) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -73501,7 +74771,9 @@ func (out *Command) UnmarshalJSON(data []byte) error {
   
   if in.ParamsParam != nil {
     raw := in.ParamsParam
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -73511,8 +74783,15 @@ func (out *Command) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -73533,7 +74812,9 @@ func (out *Command) UnmarshalJSON(data []byte) error {
   
   if in.ObjClass != nil {
     raw := in.ObjClass
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -73543,8 +74824,15 @@ func (out *Command) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -73570,7 +74858,9 @@ func (out *Command) UnmarshalJSON(data []byte) error {
   
   if in.AttrName != nil {
     raw := in.AttrName
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -73580,8 +74870,15 @@ func (out *Command) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -73920,7 +75217,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipamaxusernamelength
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -73930,8 +75235,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -73960,7 +75272,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipamaxhostnamelength
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -73970,8 +75290,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -74000,7 +75327,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipahomesrootdir
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74010,8 +75339,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74036,7 +75372,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipadefaultloginshell
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74046,8 +75384,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74072,7 +75417,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipadefaultprimarygroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74082,8 +75429,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74108,7 +75462,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if in.Ipadefaultemaildomain != nil {
     raw := in.Ipadefaultemaildomain
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74118,8 +75474,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74145,7 +75508,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipasearchtimelimit
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -74155,8 +75526,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -74185,7 +75563,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipasearchrecordslimit
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -74195,8 +75581,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -74225,7 +75618,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipausersearchfields
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74235,8 +75630,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74261,7 +75663,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipagroupsearchfields
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74271,8 +75675,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74297,7 +75708,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if in.Ipamigrationenabled != nil {
     raw := in.Ipamigrationenabled
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -74307,8 +75720,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74334,7 +75754,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipacertificatesubjectbase
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74344,8 +75766,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74370,7 +75799,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipagroupobjectclasses
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74380,8 +75811,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74406,7 +75844,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipauserobjectclasses
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74416,8 +75856,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74442,7 +75889,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipapwdexpadvnotify
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -74452,8 +75907,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -74482,7 +75944,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if in.Ipaconfigstring != nil {
     raw := in.Ipaconfigstring
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74492,8 +75956,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74514,7 +75985,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipaselinuxusermaporder
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74524,8 +75997,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74550,7 +76030,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if in.Ipaselinuxusermapdefault != nil {
     raw := in.Ipaselinuxusermapdefault
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74560,8 +76042,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74587,7 +76076,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if in.Ipakrbauthzdata != nil {
     raw := in.Ipakrbauthzdata
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74597,8 +76088,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74619,7 +76117,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if in.Ipauserauthtype != nil {
     raw := in.Ipauserauthtype
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74629,8 +76129,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74651,7 +76158,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if in.Ipauserdefaultsubordinateid != nil {
     raw := in.Ipauserdefaultsubordinateid
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -74661,8 +76170,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74688,7 +76204,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if in.IpaMasterServer != nil {
     raw := in.IpaMasterServer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74698,8 +76216,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74720,7 +76245,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if in.IpaMasterHiddenServer != nil {
     raw := in.IpaMasterHiddenServer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74730,8 +76257,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74752,7 +76286,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if in.PkinitServerServer != nil {
     raw := in.PkinitServerServer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74762,8 +76298,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74784,7 +76327,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if in.CaServerServer != nil {
     raw := in.CaServerServer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74794,8 +76339,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74816,7 +76368,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if in.CaServerHiddenServer != nil {
     raw := in.CaServerHiddenServer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74826,8 +76380,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74848,7 +76409,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if in.CaRenewalMasterServer != nil {
     raw := in.CaRenewalMasterServer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74858,8 +76421,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74885,7 +76455,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if in.KraServerServer != nil {
     raw := in.KraServerServer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74895,8 +76467,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74917,7 +76496,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if in.KraServerHiddenServer != nil {
     raw := in.KraServerHiddenServer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74927,8 +76508,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74949,7 +76537,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if in.Ipadomainresolutionorder != nil {
     raw := in.Ipadomainresolutionorder
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74959,8 +76549,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -74986,7 +76583,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if in.DNSServerServer != nil {
     raw := in.DNSServerServer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -74996,8 +76595,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -75018,7 +76624,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if in.DNSServerHiddenServer != nil {
     raw := in.DNSServerHiddenServer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -75028,8 +76636,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -75050,7 +76665,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if in.DnssecKeyMasterServer != nil {
     raw := in.DnssecKeyMasterServer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -75060,8 +76677,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -75087,7 +76711,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if in.EnableSid != nil {
     raw := in.EnableSid
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -75097,8 +76723,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -75124,7 +76757,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if in.AddSids != nil {
     raw := in.AddSids
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -75134,8 +76769,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -75161,7 +76803,9 @@ func (out *Config) UnmarshalJSON(data []byte) error {
   
   if in.NetbiosName != nil {
     raw := in.NetbiosName
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -75171,8 +76815,15 @@ func (out *Config) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -75247,7 +76898,9 @@ func (out *Cosentry) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -75257,8 +76910,15 @@ func (out *Cosentry) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -75283,7 +76943,9 @@ func (out *Cosentry) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Krbpwdpolicyreference
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -75293,8 +76955,15 @@ func (out *Cosentry) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -75319,7 +76988,15 @@ func (out *Cosentry) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cospriority
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -75329,8 +77006,15 @@ func (out *Cosentry) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -75432,7 +77116,9 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Aciname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -75442,8 +77128,15 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -75468,7 +77161,9 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
   
   if in.Permissions != nil {
     raw := in.Permissions
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -75478,8 +77173,15 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -75500,7 +77202,9 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Attrs
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -75510,8 +77214,15 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -75536,7 +77247,9 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Memberof
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -75546,8 +77259,15 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -75572,7 +77292,9 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Group
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -75582,8 +77304,15 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -75608,7 +77337,9 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Aci
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -75618,8 +77349,15 @@ func (out *Delegation) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -75685,7 +77423,9 @@ func (out *DNSSystemRecords) UnmarshalJSON(data []byte) error {
   
   if in.IpaRecords != nil {
     raw := in.IpaRecords
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -75695,8 +77435,15 @@ func (out *DNSSystemRecords) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -75717,7 +77464,9 @@ func (out *DNSSystemRecords) UnmarshalJSON(data []byte) error {
   
   if in.LocationRecords != nil {
     raw := in.LocationRecords
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -75727,8 +77476,15 @@ func (out *DNSSystemRecords) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -75782,7 +77538,9 @@ func (out *Dnsa6record) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Data
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -75792,8 +77550,15 @@ func (out *Dnsa6record) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -75851,7 +77616,9 @@ func (out *Dnsaaaarecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.IPAddress
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -75861,8 +77628,15 @@ func (out *Dnsaaaarecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -75928,7 +77702,15 @@ func (out *Dnsafsdbrecord) UnmarshalJSON(data []byte) error {
   
   if in.Subtype != nil {
     raw := in.Subtype
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -75938,8 +77720,15 @@ func (out *Dnsafsdbrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -75969,7 +77758,9 @@ func (out *Dnsafsdbrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Hostname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -75979,8 +77770,15 @@ func (out *Dnsafsdbrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -76063,7 +77861,9 @@ func (out *Dnsarecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.IPAddress
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -76073,8 +77873,15 @@ func (out *Dnsarecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -76156,7 +77963,15 @@ func (out *Dnscertrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Type
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -76166,8 +77981,15 @@ func (out *Dnscertrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -76196,7 +78018,15 @@ func (out *Dnscertrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.KeyTag
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -76206,8 +78036,15 @@ func (out *Dnscertrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -76236,7 +78073,15 @@ func (out *Dnscertrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Algorithm
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -76246,8 +78091,15 @@ func (out *Dnscertrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -76276,7 +78128,9 @@ func (out *Dnscertrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.CertificateOrCrl
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -76286,8 +78140,15 @@ func (out *Dnscertrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -76345,7 +78206,9 @@ func (out *Dnscnamerecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Hostname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -76355,8 +78218,15 @@ func (out *Dnscnamerecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -76462,7 +78332,9 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
   
   if in.Idnsforwarders != nil {
     raw := in.Idnsforwarders
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -76472,8 +78344,15 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -76494,7 +78373,9 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
   
   if in.Idnsforwardpolicy != nil {
     raw := in.Idnsforwardpolicy
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -76504,8 +78385,15 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -76531,7 +78419,9 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
   
   if in.Idnsallowsyncptr != nil {
     raw := in.Idnsallowsyncptr
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -76541,8 +78431,15 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -76568,7 +78465,15 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
   
   if in.Idnszonerefresh != nil {
     raw := in.Idnszonerefresh
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -76578,8 +78483,15 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -76609,7 +78521,15 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
   
   if in.Ipadnsversion != nil {
     raw := in.Ipadnsversion
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -76619,8 +78539,15 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -76650,7 +78577,9 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
   
   if in.DNSServerServer != nil {
     raw := in.DNSServerServer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -76660,8 +78589,15 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -76682,7 +78618,9 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
   
   if in.DnssecKeyMasterServer != nil {
     raw := in.DnssecKeyMasterServer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -76692,8 +78630,15 @@ func (out *Dnsconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -76801,7 +78746,15 @@ func (out *Dnsdlvrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.KeyTag
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -76811,8 +78764,15 @@ func (out *Dnsdlvrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -76841,7 +78801,15 @@ func (out *Dnsdlvrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Algorithm
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -76851,8 +78819,15 @@ func (out *Dnsdlvrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -76881,7 +78856,15 @@ func (out *Dnsdlvrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.DigestType
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -76891,8 +78874,15 @@ func (out *Dnsdlvrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -76921,7 +78911,9 @@ func (out *Dnsdlvrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Digest
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -76931,8 +78923,15 @@ func (out *Dnsdlvrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -76990,7 +78989,9 @@ func (out *Dnsdnamerecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Target
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -77000,8 +79001,15 @@ func (out *Dnsdnamerecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -77083,7 +79091,15 @@ func (out *Dnsdsrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.KeyTag
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -77093,8 +79109,15 @@ func (out *Dnsdsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -77123,7 +79146,15 @@ func (out *Dnsdsrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Algorithm
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -77133,8 +79164,15 @@ func (out *Dnsdsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -77163,7 +79201,15 @@ func (out *Dnsdsrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.DigestType
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -77173,8 +79219,15 @@ func (out *Dnsdsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -77203,7 +79256,9 @@ func (out *Dnsdsrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Digest
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -77213,8 +79268,15 @@ func (out *Dnsdsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -77312,7 +79374,9 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Idnsname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -77322,8 +79386,15 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -77348,7 +79419,9 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
   
   if in.NameFromIP != nil {
     raw := in.NameFromIP
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -77358,8 +79431,15 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -77385,7 +79465,9 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
   
   if in.Idnszoneactive != nil {
     raw := in.Idnszoneactive
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -77395,8 +79477,15 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -77422,7 +79511,9 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
   
   if in.Idnsforwarders != nil {
     raw := in.Idnsforwarders
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -77432,8 +79523,15 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -77454,7 +79552,9 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
   
   if in.Idnsforwardpolicy != nil {
     raw := in.Idnsforwardpolicy
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -77464,8 +79564,15 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -77491,7 +79598,9 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Managedby
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -77501,8 +79610,15 @@ func (out *Dnsforwardzone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -77643,7 +79759,15 @@ func (out *Dnskxrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Preference
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -77653,8 +79777,15 @@ func (out *Dnskxrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -77683,7 +79814,9 @@ func (out *Dnskxrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Exchanger
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -77693,8 +79826,15 @@ func (out *Dnskxrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -77840,7 +79980,15 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.LatDeg
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -77850,8 +79998,15 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -77880,7 +80035,15 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
   
   if in.LatMin != nil {
     raw := in.LatMin
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -77890,8 +80053,15 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -77921,7 +80091,9 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
   
   if in.LatSec != nil {
     raw := in.LatSec
+    
     plainV, plainOk := raw.(float64)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []float64
     sliceOk := sliceWrapperOk
@@ -77931,8 +80103,15 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(float64))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -77958,7 +80137,9 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.LatDir
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -77968,8 +80149,15 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -77994,7 +80182,15 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.LonDeg
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -78004,8 +80200,15 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -78034,7 +80237,15 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
   
   if in.LonMin != nil {
     raw := in.LonMin
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -78044,8 +80255,15 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -78075,7 +80293,9 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
   
   if in.LonSec != nil {
     raw := in.LonSec
+    
     plainV, plainOk := raw.(float64)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []float64
     sliceOk := sliceWrapperOk
@@ -78085,8 +80305,15 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(float64))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -78112,7 +80339,9 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.LonDir
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -78122,8 +80351,15 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -78148,7 +80384,9 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Altitude
+    
     plainV, plainOk := raw.(float64)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []float64
     sliceOk := sliceWrapperOk
@@ -78158,8 +80396,15 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(float64))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -78184,7 +80429,9 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
   
   if in.Size != nil {
     raw := in.Size
+    
     plainV, plainOk := raw.(float64)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []float64
     sliceOk := sliceWrapperOk
@@ -78194,8 +80441,15 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(float64))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -78221,7 +80475,9 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
   
   if in.HPrecision != nil {
     raw := in.HPrecision
+    
     plainV, plainOk := raw.(float64)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []float64
     sliceOk := sliceWrapperOk
@@ -78231,8 +80487,15 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(float64))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -78258,7 +80521,9 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
   
   if in.VPrecision != nil {
     raw := in.VPrecision
+    
     plainV, plainOk := raw.(float64)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []float64
     sliceOk := sliceWrapperOk
@@ -78268,8 +80533,15 @@ func (out *Dnslocrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(float64))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -78336,7 +80608,15 @@ func (out *Dnsmxrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Preference
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -78346,8 +80626,15 @@ func (out *Dnsmxrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -78376,7 +80663,9 @@ func (out *Dnsmxrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Exchanger
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -78386,8 +80675,15 @@ func (out *Dnsmxrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -78485,7 +80781,15 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Order
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -78495,8 +80799,15 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -78525,7 +80836,15 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Preference
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -78535,8 +80854,15 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -78565,7 +80891,9 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Flags
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -78575,8 +80903,15 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -78601,7 +80936,9 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Service
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -78611,8 +80948,15 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -78637,7 +80981,9 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Regexp
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -78647,8 +80993,15 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -78673,7 +81026,9 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Replacement
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -78683,8 +81038,15 @@ func (out *Dnsnaptrrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -78767,7 +81129,9 @@ func (out *Dnsnsrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Hostname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -78777,8 +81141,15 @@ func (out *Dnsnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -78836,7 +81207,9 @@ func (out *Dnsptrrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Hostname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -78846,8 +81219,15 @@ func (out *Dnsptrrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -79665,7 +82045,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Idnsname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -79675,8 +82057,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -79701,7 +82090,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Dnsttl != nil {
     raw := in.Dnsttl
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -79711,8 +82108,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -79742,7 +82146,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Dnsclass != nil {
     raw := in.Dnsclass
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -79752,8 +82158,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -79779,7 +82192,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Dnsrecords != nil {
     raw := in.Dnsrecords
+    
     plainV, plainOk := raw.(interface{})
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []interface{}
     sliceOk := sliceWrapperOk
@@ -79789,8 +82204,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(interface{})
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(interface{}))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -79816,7 +82238,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Dnstype != nil {
     raw := in.Dnstype
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -79826,8 +82250,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -79853,7 +82284,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Dnsdata != nil {
     raw := in.Dnsdata
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -79863,8 +82296,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -79890,7 +82330,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Arecord != nil {
     raw := in.Arecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -79900,8 +82342,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -79922,7 +82371,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.APartIPAddress != nil {
     raw := in.APartIPAddress
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -79932,8 +82383,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -79959,7 +82417,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.AExtraCreateReverse != nil {
     raw := in.AExtraCreateReverse
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -79969,8 +82429,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -79996,7 +82463,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Aaaarecord != nil {
     raw := in.Aaaarecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -80006,8 +82475,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -80028,7 +82504,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.AaaaPartIPAddress != nil {
     raw := in.AaaaPartIPAddress
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -80038,8 +82516,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -80065,7 +82550,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.AaaaExtraCreateReverse != nil {
     raw := in.AaaaExtraCreateReverse
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -80075,8 +82562,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -80102,7 +82596,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.A6record != nil {
     raw := in.A6record
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -80112,8 +82608,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -80134,7 +82637,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.A6PartData != nil {
     raw := in.A6PartData
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -80144,8 +82649,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -80171,7 +82683,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Afsdbrecord != nil {
     raw := in.Afsdbrecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -80181,8 +82695,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -80203,7 +82724,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.AfsdbPartSubtype != nil {
     raw := in.AfsdbPartSubtype
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -80213,8 +82742,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -80244,7 +82780,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.AfsdbPartHostname != nil {
     raw := in.AfsdbPartHostname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -80254,8 +82792,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -80281,7 +82826,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Aplrecord != nil {
     raw := in.Aplrecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -80291,8 +82838,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -80313,7 +82867,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Certrecord != nil {
     raw := in.Certrecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -80323,8 +82879,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -80345,7 +82908,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.CertPartType != nil {
     raw := in.CertPartType
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -80355,8 +82926,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -80386,7 +82964,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.CertPartKeyTag != nil {
     raw := in.CertPartKeyTag
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -80396,8 +82982,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -80427,7 +83020,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.CertPartAlgorithm != nil {
     raw := in.CertPartAlgorithm
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -80437,8 +83038,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -80468,7 +83076,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.CertPartCertificateOrCrl != nil {
     raw := in.CertPartCertificateOrCrl
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -80478,8 +83088,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -80505,7 +83122,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Cnamerecord != nil {
     raw := in.Cnamerecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -80515,8 +83134,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -80537,7 +83163,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.CnamePartHostname != nil {
     raw := in.CnamePartHostname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -80547,8 +83175,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -80574,7 +83209,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Dhcidrecord != nil {
     raw := in.Dhcidrecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -80584,8 +83221,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -80606,7 +83250,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Dlvrecord != nil {
     raw := in.Dlvrecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -80616,8 +83262,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -80638,7 +83291,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.DlvPartKeyTag != nil {
     raw := in.DlvPartKeyTag
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -80648,8 +83309,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -80679,7 +83347,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.DlvPartAlgorithm != nil {
     raw := in.DlvPartAlgorithm
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -80689,8 +83365,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -80720,7 +83403,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.DlvPartDigestType != nil {
     raw := in.DlvPartDigestType
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -80730,8 +83421,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -80761,7 +83459,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.DlvPartDigest != nil {
     raw := in.DlvPartDigest
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -80771,8 +83471,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -80798,7 +83505,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Dnamerecord != nil {
     raw := in.Dnamerecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -80808,8 +83517,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -80830,7 +83546,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.DnamePartTarget != nil {
     raw := in.DnamePartTarget
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -80840,8 +83558,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -80867,7 +83592,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Dsrecord != nil {
     raw := in.Dsrecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -80877,8 +83604,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -80899,7 +83633,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.DsPartKeyTag != nil {
     raw := in.DsPartKeyTag
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -80909,8 +83651,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -80940,7 +83689,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.DsPartAlgorithm != nil {
     raw := in.DsPartAlgorithm
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -80950,8 +83707,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -80981,7 +83745,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.DsPartDigestType != nil {
     raw := in.DsPartDigestType
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -80991,8 +83763,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -81022,7 +83801,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.DsPartDigest != nil {
     raw := in.DsPartDigest
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -81032,8 +83813,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -81059,7 +83847,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Hiprecord != nil {
     raw := in.Hiprecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -81069,8 +83859,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -81091,7 +83888,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Ipseckeyrecord != nil {
     raw := in.Ipseckeyrecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -81101,8 +83900,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -81123,7 +83929,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Keyrecord != nil {
     raw := in.Keyrecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -81133,8 +83941,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -81155,7 +83970,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Kxrecord != nil {
     raw := in.Kxrecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -81165,8 +83982,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -81187,7 +84011,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.KxPartPreference != nil {
     raw := in.KxPartPreference
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -81197,8 +84029,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -81228,7 +84067,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.KxPartExchanger != nil {
     raw := in.KxPartExchanger
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -81238,8 +84079,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -81265,7 +84113,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Locrecord != nil {
     raw := in.Locrecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -81275,8 +84125,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -81297,7 +84154,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.LocPartLatDeg != nil {
     raw := in.LocPartLatDeg
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -81307,8 +84172,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -81338,7 +84210,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.LocPartLatMin != nil {
     raw := in.LocPartLatMin
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -81348,8 +84228,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -81379,7 +84266,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.LocPartLatSec != nil {
     raw := in.LocPartLatSec
+    
     plainV, plainOk := raw.(float64)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []float64
     sliceOk := sliceWrapperOk
@@ -81389,8 +84278,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(float64))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -81416,7 +84312,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.LocPartLatDir != nil {
     raw := in.LocPartLatDir
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -81426,8 +84324,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -81453,7 +84358,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.LocPartLonDeg != nil {
     raw := in.LocPartLonDeg
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -81463,8 +84376,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -81494,7 +84414,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.LocPartLonMin != nil {
     raw := in.LocPartLonMin
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -81504,8 +84432,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -81535,7 +84470,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.LocPartLonSec != nil {
     raw := in.LocPartLonSec
+    
     plainV, plainOk := raw.(float64)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []float64
     sliceOk := sliceWrapperOk
@@ -81545,8 +84482,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(float64))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -81572,7 +84516,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.LocPartLonDir != nil {
     raw := in.LocPartLonDir
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -81582,8 +84528,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -81609,7 +84562,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.LocPartAltitude != nil {
     raw := in.LocPartAltitude
+    
     plainV, plainOk := raw.(float64)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []float64
     sliceOk := sliceWrapperOk
@@ -81619,8 +84574,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(float64))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -81646,7 +84608,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.LocPartSize != nil {
     raw := in.LocPartSize
+    
     plainV, plainOk := raw.(float64)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []float64
     sliceOk := sliceWrapperOk
@@ -81656,8 +84620,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(float64))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -81683,7 +84654,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.LocPartHPrecision != nil {
     raw := in.LocPartHPrecision
+    
     plainV, plainOk := raw.(float64)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []float64
     sliceOk := sliceWrapperOk
@@ -81693,8 +84666,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(float64))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -81720,7 +84700,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.LocPartVPrecision != nil {
     raw := in.LocPartVPrecision
+    
     plainV, plainOk := raw.(float64)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []float64
     sliceOk := sliceWrapperOk
@@ -81730,8 +84712,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(float64)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(float64))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -81757,7 +84746,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Mxrecord != nil {
     raw := in.Mxrecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -81767,8 +84758,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -81789,7 +84787,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.MxPartPreference != nil {
     raw := in.MxPartPreference
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -81799,8 +84805,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -81830,7 +84843,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.MxPartExchanger != nil {
     raw := in.MxPartExchanger
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -81840,8 +84855,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -81867,7 +84889,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Naptrrecord != nil {
     raw := in.Naptrrecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -81877,8 +84901,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -81899,7 +84930,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.NaptrPartOrder != nil {
     raw := in.NaptrPartOrder
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -81909,8 +84948,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -81940,7 +84986,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.NaptrPartPreference != nil {
     raw := in.NaptrPartPreference
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -81950,8 +85004,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -81981,7 +85042,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.NaptrPartFlags != nil {
     raw := in.NaptrPartFlags
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -81991,8 +85054,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -82018,7 +85088,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.NaptrPartService != nil {
     raw := in.NaptrPartService
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -82028,8 +85100,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -82055,7 +85134,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.NaptrPartRegexp != nil {
     raw := in.NaptrPartRegexp
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -82065,8 +85146,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -82092,7 +85180,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.NaptrPartReplacement != nil {
     raw := in.NaptrPartReplacement
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -82102,8 +85192,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -82129,7 +85226,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Nsrecord != nil {
     raw := in.Nsrecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -82139,8 +85238,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -82161,7 +85267,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.NsPartHostname != nil {
     raw := in.NsPartHostname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -82171,8 +85279,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -82198,7 +85313,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Nsecrecord != nil {
     raw := in.Nsecrecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -82208,8 +85325,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -82230,7 +85354,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Ptrrecord != nil {
     raw := in.Ptrrecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -82240,8 +85366,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -82262,7 +85395,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.PtrPartHostname != nil {
     raw := in.PtrPartHostname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -82272,8 +85407,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -82299,7 +85441,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Rrsigrecord != nil {
     raw := in.Rrsigrecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -82309,8 +85453,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -82331,7 +85482,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Rprecord != nil {
     raw := in.Rprecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -82341,8 +85494,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -82363,7 +85523,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Sigrecord != nil {
     raw := in.Sigrecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -82373,8 +85535,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -82395,7 +85564,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Spfrecord != nil {
     raw := in.Spfrecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -82405,8 +85576,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -82427,7 +85605,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Srvrecord != nil {
     raw := in.Srvrecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -82437,8 +85617,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -82459,7 +85646,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.SrvPartPriority != nil {
     raw := in.SrvPartPriority
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -82469,8 +85664,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -82500,7 +85702,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.SrvPartWeight != nil {
     raw := in.SrvPartWeight
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -82510,8 +85720,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -82541,7 +85758,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.SrvPartPort != nil {
     raw := in.SrvPartPort
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -82551,8 +85776,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -82582,7 +85814,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.SrvPartTarget != nil {
     raw := in.SrvPartTarget
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -82592,8 +85826,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -82619,7 +85860,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Sshfprecord != nil {
     raw := in.Sshfprecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -82629,8 +85872,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -82651,7 +85901,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.SshfpPartAlgorithm != nil {
     raw := in.SshfpPartAlgorithm
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -82661,8 +85919,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -82692,7 +85957,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.SshfpPartFpType != nil {
     raw := in.SshfpPartFpType
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -82702,8 +85975,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -82733,7 +86013,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.SshfpPartFingerprint != nil {
     raw := in.SshfpPartFingerprint
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -82743,8 +86025,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -82770,7 +86059,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Tlsarecord != nil {
     raw := in.Tlsarecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -82780,8 +86071,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -82802,7 +86100,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.TlsaPartCertUsage != nil {
     raw := in.TlsaPartCertUsage
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -82812,8 +86118,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -82843,7 +86156,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.TlsaPartSelector != nil {
     raw := in.TlsaPartSelector
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -82853,8 +86174,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -82884,7 +86212,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.TlsaPartMatchingType != nil {
     raw := in.TlsaPartMatchingType
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -82894,8 +86230,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -82925,7 +86268,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.TlsaPartCertAssociationData != nil {
     raw := in.TlsaPartCertAssociationData
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -82935,8 +86280,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -82962,7 +86314,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Txtrecord != nil {
     raw := in.Txtrecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -82972,8 +86326,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -82994,7 +86355,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.TxtPartData != nil {
     raw := in.TxtPartData
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -83004,8 +86367,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -83031,7 +86401,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.Urirecord != nil {
     raw := in.Urirecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -83041,8 +86413,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -83063,7 +86442,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.URIPartPriority != nil {
     raw := in.URIPartPriority
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -83073,8 +86460,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -83104,7 +86498,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.URIPartWeight != nil {
     raw := in.URIPartWeight
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -83114,8 +86516,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -83145,7 +86554,9 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
   
   if in.URIPartTarget != nil {
     raw := in.URIPartTarget
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -83155,8 +86566,15 @@ func (out *Dnsrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -83289,7 +86707,9 @@ func (out *Dnsserver) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Idnsserverid
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -83299,8 +86719,15 @@ func (out *Dnsserver) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -83325,7 +86752,9 @@ func (out *Dnsserver) UnmarshalJSON(data []byte) error {
   
   if in.Idnssoamname != nil {
     raw := in.Idnssoamname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -83335,8 +86764,15 @@ func (out *Dnsserver) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -83362,7 +86798,9 @@ func (out *Dnsserver) UnmarshalJSON(data []byte) error {
   
   if in.Idnsforwarders != nil {
     raw := in.Idnsforwarders
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -83372,8 +86810,15 @@ func (out *Dnsserver) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -83394,7 +86839,9 @@ func (out *Dnsserver) UnmarshalJSON(data []byte) error {
   
   if in.Idnsforwardpolicy != nil {
     raw := in.Idnsforwardpolicy
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -83404,8 +86851,15 @@ func (out *Dnsserver) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -83538,7 +86992,15 @@ func (out *Dnssrvrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Priority
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -83548,8 +87010,15 @@ func (out *Dnssrvrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -83578,7 +87047,15 @@ func (out *Dnssrvrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Weight
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -83588,8 +87065,15 @@ func (out *Dnssrvrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -83618,7 +87102,15 @@ func (out *Dnssrvrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Port
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -83628,8 +87120,15 @@ func (out *Dnssrvrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -83658,7 +87157,9 @@ func (out *Dnssrvrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Target
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -83668,8 +87169,15 @@ func (out *Dnssrvrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -83743,7 +87251,15 @@ func (out *Dnssshfprecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Algorithm
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -83753,8 +87269,15 @@ func (out *Dnssshfprecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -83783,7 +87306,15 @@ func (out *Dnssshfprecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.FpType
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -83793,8 +87324,15 @@ func (out *Dnssshfprecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -83823,7 +87361,9 @@ func (out *Dnssshfprecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Fingerprint
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -83833,8 +87373,15 @@ func (out *Dnssshfprecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -83916,7 +87463,15 @@ func (out *Dnstlsarecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.CertUsage
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -83926,8 +87481,15 @@ func (out *Dnstlsarecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -83956,7 +87518,15 @@ func (out *Dnstlsarecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Selector
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -83966,8 +87536,15 @@ func (out *Dnstlsarecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -83996,7 +87573,15 @@ func (out *Dnstlsarecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.MatchingType
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -84006,8 +87591,15 @@ func (out *Dnstlsarecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -84036,7 +87628,9 @@ func (out *Dnstlsarecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.CertAssociationData
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -84046,8 +87640,15 @@ func (out *Dnstlsarecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -84105,7 +87706,9 @@ func (out *Dnstxtrecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Data
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -84115,8 +87718,15 @@ func (out *Dnstxtrecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -84190,7 +87800,15 @@ func (out *Dnsurirecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Priority
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -84200,8 +87818,15 @@ func (out *Dnsurirecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -84230,7 +87855,15 @@ func (out *Dnsurirecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Weight
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -84240,8 +87873,15 @@ func (out *Dnsurirecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -84270,7 +87910,9 @@ func (out *Dnsurirecord) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Target
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -84280,8 +87922,15 @@ func (out *Dnsurirecord) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -84515,7 +88164,9 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Idnsname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -84525,8 +88176,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -84551,7 +88209,9 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if in.NameFromIP != nil {
     raw := in.NameFromIP
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -84561,8 +88221,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -84588,7 +88255,9 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if in.Idnszoneactive != nil {
     raw := in.Idnszoneactive
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -84598,8 +88267,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -84625,7 +88301,9 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if in.Idnsforwarders != nil {
     raw := in.Idnsforwarders
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -84635,8 +88313,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -84657,7 +88342,9 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if in.Idnsforwardpolicy != nil {
     raw := in.Idnsforwardpolicy
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -84667,8 +88354,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -84694,7 +88388,9 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Managedby
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -84704,8 +88400,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -84730,7 +88433,9 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if in.Idnssoamname != nil {
     raw := in.Idnssoamname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -84740,8 +88445,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -84767,7 +88479,9 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Idnssoarname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -84777,8 +88491,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -84803,7 +88524,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Idnssoaserial
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -84813,8 +88542,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -84843,7 +88579,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Idnssoarefresh
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -84853,8 +88597,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -84883,7 +88634,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Idnssoaretry
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -84893,8 +88652,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -84923,7 +88689,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Idnssoaexpire
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -84933,8 +88707,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -84963,7 +88744,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Idnssoaminimum
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -84973,8 +88762,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -85003,7 +88799,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if in.Dnsttl != nil {
     raw := in.Dnsttl
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -85013,8 +88817,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -85044,7 +88855,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if in.Dnsdefaultttl != nil {
     raw := in.Dnsdefaultttl
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -85054,8 +88873,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -85085,7 +88911,9 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if in.Dnsclass != nil {
     raw := in.Dnsclass
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -85095,8 +88923,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -85122,7 +88957,9 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if in.Idnsupdatepolicy != nil {
     raw := in.Idnsupdatepolicy
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -85132,8 +88969,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -85159,7 +89003,9 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if in.Idnsallowdynupdate != nil {
     raw := in.Idnsallowdynupdate
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -85169,8 +89015,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -85196,7 +89049,9 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if in.Idnsallowquery != nil {
     raw := in.Idnsallowquery
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -85206,8 +89061,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -85233,7 +89095,9 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if in.Idnsallowtransfer != nil {
     raw := in.Idnsallowtransfer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -85243,8 +89107,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -85270,7 +89141,9 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if in.Idnsallowsyncptr != nil {
     raw := in.Idnsallowsyncptr
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -85280,8 +89153,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -85307,7 +89187,9 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if in.Idnssecinlinesigning != nil {
     raw := in.Idnssecinlinesigning
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -85317,8 +89199,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -85344,7 +89233,9 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
   
   if in.Nsec3paramrecord != nil {
     raw := in.Nsec3paramrecord
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -85354,8 +89245,15 @@ func (out *Dnszone) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -85590,7 +89488,9 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -85600,8 +89500,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -85626,7 +89533,9 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -85636,8 +89545,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -85663,7 +89579,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if in.Gidnumber != nil {
     raw := in.Gidnumber
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -85673,8 +89597,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -85704,7 +89635,9 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if in.Ipaexternalmember != nil {
     raw := in.Ipaexternalmember
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -85714,8 +89647,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -85736,7 +89676,9 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if in.MemberUser != nil {
     raw := in.MemberUser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -85746,8 +89688,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -85768,7 +89717,9 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if in.MemberGroup != nil {
     raw := in.MemberGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -85778,8 +89729,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -85800,7 +89758,9 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if in.MemberofGroup != nil {
     raw := in.MemberofGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -85810,8 +89770,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -85832,7 +89799,9 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if in.MemberofRole != nil {
     raw := in.MemberofRole
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -85842,8 +89811,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -85864,7 +89840,9 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if in.MemberofNetgroup != nil {
     raw := in.MemberofNetgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -85874,8 +89852,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -85896,7 +89881,9 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if in.MemberService != nil {
     raw := in.MemberService
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -85906,8 +89893,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -85928,7 +89922,9 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if in.MemberofSudorule != nil {
     raw := in.MemberofSudorule
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -85938,8 +89934,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -85960,7 +89963,9 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if in.MemberofHbacrule != nil {
     raw := in.MemberofHbacrule
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -85970,8 +89975,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -85992,7 +90004,9 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if in.MemberIdoverrideuser != nil {
     raw := in.MemberIdoverrideuser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -86002,8 +90016,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86024,7 +90045,9 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if in.MemberindirectIdoverrideuser != nil {
     raw := in.MemberindirectIdoverrideuser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -86034,8 +90057,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86061,7 +90091,9 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if in.MemberindirectUser != nil {
     raw := in.MemberindirectUser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -86071,8 +90103,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86098,7 +90137,9 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if in.MemberindirectGroup != nil {
     raw := in.MemberindirectGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -86108,8 +90149,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86135,7 +90183,9 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectGroup != nil {
     raw := in.MemberofindirectGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -86145,8 +90195,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86172,7 +90229,9 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectNetgroup != nil {
     raw := in.MemberofindirectNetgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -86182,8 +90241,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86209,7 +90275,9 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectRole != nil {
     raw := in.MemberofindirectRole
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -86219,8 +90287,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86246,7 +90321,9 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectSudorule != nil {
     raw := in.MemberofindirectSudorule
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -86256,8 +90333,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86283,7 +90367,9 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectHbacrule != nil {
     raw := in.MemberofindirectHbacrule
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -86293,8 +90379,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86320,7 +90413,9 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.MembermanagerGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -86330,8 +90425,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86356,7 +90458,9 @@ func (out *Group) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.MembermanagerUser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -86366,8 +90470,15 @@ func (out *Group) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86553,7 +90664,9 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -86563,8 +90676,15 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86589,7 +90709,9 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Accessruletype
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -86599,8 +90721,15 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86625,7 +90754,9 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
   
   if in.Usercategory != nil {
     raw := in.Usercategory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -86635,8 +90766,15 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86662,7 +90800,9 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
   
   if in.Hostcategory != nil {
     raw := in.Hostcategory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -86672,8 +90812,15 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86699,7 +90846,9 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
   
   if in.Sourcehostcategory != nil {
     raw := in.Sourcehostcategory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -86709,8 +90858,15 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86736,7 +90892,9 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
   
   if in.Servicecategory != nil {
     raw := in.Servicecategory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -86746,8 +90904,15 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86773,7 +90938,9 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -86783,8 +90950,15 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86810,7 +90984,9 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
   
   if in.Ipaenabledflag != nil {
     raw := in.Ipaenabledflag
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -86820,8 +90996,15 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86847,7 +91030,9 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
   
   if in.MemberuserUser != nil {
     raw := in.MemberuserUser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -86857,8 +91042,15 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86884,7 +91076,9 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
   
   if in.MemberuserGroup != nil {
     raw := in.MemberuserGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -86894,8 +91088,15 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86921,7 +91122,9 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
   
   if in.MemberhostHost != nil {
     raw := in.MemberhostHost
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -86931,8 +91134,15 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86958,7 +91168,9 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
   
   if in.MemberhostHostgroup != nil {
     raw := in.MemberhostHostgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -86968,8 +91180,15 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -86995,7 +91214,9 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
   
   if in.SourcehostHost != nil {
     raw := in.SourcehostHost
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -87005,8 +91226,15 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -87032,7 +91260,9 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
   
   if in.SourcehostHostgroup != nil {
     raw := in.SourcehostHostgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -87042,8 +91272,15 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -87069,7 +91306,9 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
   
   if in.MemberserviceHbacsvc != nil {
     raw := in.MemberserviceHbacsvc
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -87079,8 +91318,15 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -87106,7 +91352,9 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
   
   if in.MemberserviceHbacsvcgroup != nil {
     raw := in.MemberserviceHbacsvcgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -87116,8 +91364,15 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -87143,7 +91398,9 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
   
   if in.Externalhost != nil {
     raw := in.Externalhost
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -87153,8 +91410,15 @@ func (out *Hbacrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -87224,7 +91488,9 @@ func (out *Hbacsvc) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -87234,8 +91500,15 @@ func (out *Hbacsvc) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -87260,7 +91533,9 @@ func (out *Hbacsvc) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -87270,8 +91545,15 @@ func (out *Hbacsvc) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -87297,7 +91579,9 @@ func (out *Hbacsvc) UnmarshalJSON(data []byte) error {
   
   if in.MemberofHbacsvcgroup != nil {
     raw := in.MemberofHbacsvcgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -87307,8 +91591,15 @@ func (out *Hbacsvc) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -87378,7 +91669,9 @@ func (out *Hbacsvcgroup) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -87388,8 +91681,15 @@ func (out *Hbacsvcgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -87414,7 +91714,9 @@ func (out *Hbacsvcgroup) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -87424,8 +91726,15 @@ func (out *Hbacsvcgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -87451,7 +91760,9 @@ func (out *Hbacsvcgroup) UnmarshalJSON(data []byte) error {
   
   if in.MemberHbacsvc != nil {
     raw := in.MemberHbacsvc
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -87461,8 +91772,15 @@ func (out *Hbacsvcgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -87924,7 +92242,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Fqdn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -87934,8 +92254,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -87960,7 +92287,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -87970,8 +92299,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -87997,7 +92333,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.L != nil {
     raw := in.L
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88007,8 +92345,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88034,7 +92379,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Nshostlocation != nil {
     raw := in.Nshostlocation
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88044,8 +92391,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88071,7 +92425,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Nshardwareplatform != nil {
     raw := in.Nshardwareplatform
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88081,8 +92437,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88108,7 +92471,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Nsosversion != nil {
     raw := in.Nsosversion
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88118,8 +92483,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88145,7 +92517,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Userpassword != nil {
     raw := in.Userpassword
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88155,8 +92529,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88182,7 +92563,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Random != nil {
     raw := in.Random
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -88192,8 +92575,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88219,7 +92609,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Randompassword != nil {
     raw := in.Randompassword
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88229,8 +92621,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88256,7 +92655,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Usercertificate != nil {
     raw := in.Usercertificate
+    
     plainV, plainOk := raw.(interface{})
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []interface{}
     sliceOk := sliceWrapperOk
@@ -88266,8 +92667,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(interface{})
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(interface{}))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88288,7 +92696,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Subject != nil {
     raw := in.Subject
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88298,8 +92708,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88325,7 +92742,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.SerialNumber != nil {
     raw := in.SerialNumber
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88335,8 +92754,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88362,7 +92788,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.SerialNumberHex != nil {
     raw := in.SerialNumberHex
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88372,8 +92800,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88399,7 +92834,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Issuer != nil {
     raw := in.Issuer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88409,8 +92846,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88436,7 +92880,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.ValidNotBefore != nil {
     raw := in.ValidNotBefore
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88446,8 +92892,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88473,7 +92926,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.ValidNotAfter != nil {
     raw := in.ValidNotAfter
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88483,8 +92938,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88510,7 +92972,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Sha1Fingerprint != nil {
     raw := in.Sha1Fingerprint
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88520,8 +92984,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88547,7 +93018,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Sha256Fingerprint != nil {
     raw := in.Sha256Fingerprint
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88557,8 +93030,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88584,7 +93064,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.RevocationReason != nil {
     raw := in.RevocationReason
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88594,8 +93076,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88621,7 +93110,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Krbcanonicalname != nil {
     raw := in.Krbcanonicalname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88631,8 +93122,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88658,7 +93156,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Krbprincipalname != nil {
     raw := in.Krbprincipalname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88668,8 +93168,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88690,7 +93197,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Macaddress != nil {
     raw := in.Macaddress
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88700,8 +93209,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88722,7 +93238,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Ipasshpubkey != nil {
     raw := in.Ipasshpubkey
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88732,8 +93250,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88754,7 +93279,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Sshpubkeyfp != nil {
     raw := in.Sshpubkeyfp
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88764,8 +93291,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88786,7 +93320,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Userclass != nil {
     raw := in.Userclass
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88796,8 +93332,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88818,7 +93361,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Ipaassignedidview != nil {
     raw := in.Ipaassignedidview
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88828,8 +93373,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88855,7 +93407,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Krbprincipalauthind != nil {
     raw := in.Krbprincipalauthind
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -88865,8 +93419,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88887,7 +93448,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Ipakrbrequirespreauth != nil {
     raw := in.Ipakrbrequirespreauth
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -88897,8 +93460,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88924,7 +93494,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Ipakrbokasdelegate != nil {
     raw := in.Ipakrbokasdelegate
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -88934,8 +93506,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88961,7 +93540,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.Ipakrboktoauthasdelegate != nil {
     raw := in.Ipakrboktoauthasdelegate
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -88971,8 +93552,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -88998,7 +93586,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.HasPassword != nil {
     raw := in.HasPassword
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -89008,8 +93598,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89035,7 +93632,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.MemberofHostgroup != nil {
     raw := in.MemberofHostgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -89045,8 +93644,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89067,7 +93673,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.MemberofRole != nil {
     raw := in.MemberofRole
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -89077,8 +93685,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89099,7 +93714,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.MemberofNetgroup != nil {
     raw := in.MemberofNetgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -89109,8 +93726,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89131,7 +93755,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.MemberofSudorule != nil {
     raw := in.MemberofSudorule
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -89141,8 +93767,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89163,7 +93796,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.MemberofHbacrule != nil {
     raw := in.MemberofHbacrule
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -89173,8 +93808,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89195,7 +93837,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectNetgroup != nil {
     raw := in.MemberofindirectNetgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -89205,8 +93849,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89232,7 +93883,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectHostgroup != nil {
     raw := in.MemberofindirectHostgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -89242,8 +93895,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89269,7 +93929,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectRole != nil {
     raw := in.MemberofindirectRole
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -89279,8 +93941,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89306,7 +93975,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectSudorule != nil {
     raw := in.MemberofindirectSudorule
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -89316,8 +93987,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89343,7 +94021,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectHbacrule != nil {
     raw := in.MemberofindirectHbacrule
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -89353,8 +94033,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89380,7 +94067,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.HasKeytab != nil {
     raw := in.HasKeytab
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -89390,8 +94079,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89417,7 +94113,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.ManagedbyHost
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -89427,8 +94125,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89453,7 +94158,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.ManagingHost != nil {
     raw := in.ManagingHost
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -89463,8 +94170,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89490,7 +94204,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.IpaallowedtoperformReadKeysUser != nil {
     raw := in.IpaallowedtoperformReadKeysUser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -89500,8 +94216,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89527,7 +94250,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.IpaallowedtoperformReadKeysGroup != nil {
     raw := in.IpaallowedtoperformReadKeysGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -89537,8 +94262,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89564,7 +94296,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.IpaallowedtoperformReadKeysHost != nil {
     raw := in.IpaallowedtoperformReadKeysHost
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -89574,8 +94308,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89601,7 +94342,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.IpaallowedtoperformReadKeysHostgroup != nil {
     raw := in.IpaallowedtoperformReadKeysHostgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -89611,8 +94354,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89638,7 +94388,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.IpaallowedtoperformWriteKeysUser != nil {
     raw := in.IpaallowedtoperformWriteKeysUser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -89648,8 +94400,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89675,7 +94434,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.IpaallowedtoperformWriteKeysGroup != nil {
     raw := in.IpaallowedtoperformWriteKeysGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -89685,8 +94446,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89712,7 +94480,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.IpaallowedtoperformWriteKeysHost != nil {
     raw := in.IpaallowedtoperformWriteKeysHost
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -89722,8 +94492,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89749,7 +94526,9 @@ func (out *Host) UnmarshalJSON(data []byte) error {
   
   if in.IpaallowedtoperformWriteKeysHostgroup != nil {
     raw := in.IpaallowedtoperformWriteKeysHostgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -89759,8 +94538,15 @@ func (out *Host) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89931,7 +94717,9 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -89941,8 +94729,15 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -89967,7 +94762,9 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -89977,8 +94774,15 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -90004,7 +94808,9 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
   
   if in.MemberHost != nil {
     raw := in.MemberHost
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -90014,8 +94820,15 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -90036,7 +94849,9 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
   
   if in.MemberHostgroup != nil {
     raw := in.MemberHostgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -90046,8 +94861,15 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -90068,7 +94890,9 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
   
   if in.MemberofHostgroup != nil {
     raw := in.MemberofHostgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -90078,8 +94902,15 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -90100,7 +94931,9 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
   
   if in.MemberofNetgroup != nil {
     raw := in.MemberofNetgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -90110,8 +94943,15 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -90132,7 +94972,9 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
   
   if in.MemberofSudorule != nil {
     raw := in.MemberofSudorule
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -90142,8 +94984,15 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -90164,7 +95013,9 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
   
   if in.MemberofHbacrule != nil {
     raw := in.MemberofHbacrule
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -90174,8 +95025,15 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -90196,7 +95054,9 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
   
   if in.MemberindirectHost != nil {
     raw := in.MemberindirectHost
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -90206,8 +95066,15 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -90233,7 +95100,9 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
   
   if in.MemberindirectHostgroup != nil {
     raw := in.MemberindirectHostgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -90243,8 +95112,15 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -90270,7 +95146,9 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectHostgroup != nil {
     raw := in.MemberofindirectHostgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -90280,8 +95158,15 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -90307,7 +95192,9 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectSudorule != nil {
     raw := in.MemberofindirectSudorule
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -90317,8 +95204,15 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -90344,7 +95238,9 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectHbacrule != nil {
     raw := in.MemberofindirectHbacrule
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -90354,8 +95250,15 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -90381,7 +95284,9 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.MembermanagerGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -90391,8 +95296,15 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -90417,7 +95329,9 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.MembermanagerUser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -90427,8 +95341,15 @@ func (out *Hostgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -90510,7 +95431,9 @@ func (out *Idoverridegroup) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipaanchoruuid
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -90520,8 +95443,15 @@ func (out *Idoverridegroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -90546,7 +95476,9 @@ func (out *Idoverridegroup) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -90556,8 +95488,15 @@ func (out *Idoverridegroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -90583,7 +95522,9 @@ func (out *Idoverridegroup) UnmarshalJSON(data []byte) error {
   
   if in.Cn != nil {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -90593,8 +95534,15 @@ func (out *Idoverridegroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -90620,7 +95568,15 @@ func (out *Idoverridegroup) UnmarshalJSON(data []byte) error {
   
   if in.Gidnumber != nil {
     raw := in.Gidnumber
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -90630,8 +95586,15 @@ func (out *Idoverridegroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -90806,7 +95769,9 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipaanchoruuid
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -90816,8 +95781,15 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -90842,7 +95814,9 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -90852,8 +95826,15 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -90879,7 +95860,9 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
   
   if in.UID != nil {
     raw := in.UID
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -90889,8 +95872,15 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -90916,7 +95906,15 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
   
   if in.Uidnumber != nil {
     raw := in.Uidnumber
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -90926,8 +95924,15 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -90957,7 +95962,9 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
   
   if in.Gecos != nil {
     raw := in.Gecos
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -90967,8 +95974,15 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -90994,7 +96008,15 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
   
   if in.Gidnumber != nil {
     raw := in.Gidnumber
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -91004,8 +96026,15 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -91035,7 +96064,9 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
   
   if in.Homedirectory != nil {
     raw := in.Homedirectory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -91045,8 +96076,15 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -91072,7 +96110,9 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
   
   if in.Loginshell != nil {
     raw := in.Loginshell
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -91082,8 +96122,15 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -91109,7 +96156,9 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
   
   if in.Ipaoriginaluid != nil {
     raw := in.Ipaoriginaluid
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -91119,8 +96168,15 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -91146,7 +96202,9 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
   
   if in.Ipasshpubkey != nil {
     raw := in.Ipasshpubkey
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -91156,8 +96214,15 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -91178,7 +96243,9 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
   
   if in.Usercertificate != nil {
     raw := in.Usercertificate
+    
     plainV, plainOk := raw.(interface{})
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []interface{}
     sliceOk := sliceWrapperOk
@@ -91188,8 +96255,15 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(interface{})
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(interface{}))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -91210,7 +96284,9 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
   
   if in.MemberofGroup != nil {
     raw := in.MemberofGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -91220,8 +96296,15 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -91242,7 +96325,9 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
   
   if in.MemberofRole != nil {
     raw := in.MemberofRole
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -91252,8 +96337,15 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -91274,7 +96366,9 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectGroup != nil {
     raw := in.MemberofindirectGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -91284,8 +96378,15 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -91311,7 +96412,9 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectRole != nil {
     raw := in.MemberofindirectRole
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -91321,8 +96424,15 @@ func (out *Idoverrideuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -91445,7 +96555,9 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -91455,8 +96567,15 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -91481,7 +96600,15 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipabaseid
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -91491,8 +96618,15 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -91521,7 +96655,15 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipaidrangesize
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -91531,8 +96673,15 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -91561,7 +96710,15 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
   
   if in.Ipabaserid != nil {
     raw := in.Ipabaserid
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -91571,8 +96728,15 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -91602,7 +96766,15 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
   
   if in.Ipasecondarybaserid != nil {
     raw := in.Ipasecondarybaserid
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -91612,8 +96784,15 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -91643,7 +96822,9 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
   
   if in.Ipanttrusteddomainsid != nil {
     raw := in.Ipanttrusteddomainsid
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -91653,8 +96834,15 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -91680,7 +96868,9 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
   
   if in.Ipanttrusteddomainname != nil {
     raw := in.Ipanttrusteddomainname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -91690,8 +96880,15 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -91717,7 +96914,9 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
   
   if in.Iparangetype != nil {
     raw := in.Iparangetype
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -91727,8 +96926,15 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -91754,7 +96960,9 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
   
   if in.Ipaautoprivategroups != nil {
     raw := in.Ipaautoprivategroups
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -91764,8 +96972,15 @@ func (out *Idrange) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -91864,7 +97079,9 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -91874,8 +97091,15 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -91900,7 +97124,9 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -91910,8 +97136,15 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -91937,7 +97170,9 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Useroverrides
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -91947,8 +97182,15 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -91973,7 +97215,9 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Groupoverrides
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -91983,8 +97227,15 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -92009,7 +97260,9 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Appliedtohosts
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -92019,8 +97272,15 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -92045,7 +97305,9 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
   
   if in.Ipadomainresolutionorder != nil {
     raw := in.Ipadomainresolutionorder
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -92055,8 +97317,15 @@ func (out *Idview) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -92195,7 +97464,9 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
   
   if in.UID != nil {
     raw := in.UID
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -92205,8 +97476,15 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -92232,7 +97510,15 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
   
   if in.Krbmaxticketlife != nil {
     raw := in.Krbmaxticketlife
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -92242,8 +97528,15 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -92273,7 +97566,15 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
   
   if in.Krbmaxrenewableage != nil {
     raw := in.Krbmaxrenewableage
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -92283,8 +97584,15 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -92314,7 +97622,15 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
   
   if in.KrbauthindmaxticketlifeOtp != nil {
     raw := in.KrbauthindmaxticketlifeOtp
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -92324,8 +97640,15 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -92355,7 +97678,15 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
   
   if in.KrbauthindmaxrenewableageOtp != nil {
     raw := in.KrbauthindmaxrenewableageOtp
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -92365,8 +97696,15 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -92396,7 +97734,15 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
   
   if in.KrbauthindmaxticketlifeRadius != nil {
     raw := in.KrbauthindmaxticketlifeRadius
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -92406,8 +97752,15 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -92437,7 +97790,15 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
   
   if in.KrbauthindmaxrenewableageRadius != nil {
     raw := in.KrbauthindmaxrenewableageRadius
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -92447,8 +97808,15 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -92478,7 +97846,15 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
   
   if in.KrbauthindmaxticketlifePkinit != nil {
     raw := in.KrbauthindmaxticketlifePkinit
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -92488,8 +97864,15 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -92519,7 +97902,15 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
   
   if in.KrbauthindmaxrenewableagePkinit != nil {
     raw := in.KrbauthindmaxrenewableagePkinit
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -92529,8 +97920,15 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -92560,7 +97958,15 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
   
   if in.KrbauthindmaxticketlifeHardened != nil {
     raw := in.KrbauthindmaxticketlifeHardened
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -92570,8 +97976,15 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -92601,7 +98014,15 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
   
   if in.KrbauthindmaxrenewableageHardened != nil {
     raw := in.KrbauthindmaxrenewableageHardened
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -92611,8 +98032,15 @@ func (out *Krbtpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -92699,7 +98127,9 @@ func (out *Location) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Idnsname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -92709,8 +98139,15 @@ func (out *Location) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -92735,7 +98172,9 @@ func (out *Location) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -92745,8 +98184,15 @@ func (out *Location) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -92772,7 +98218,9 @@ func (out *Location) UnmarshalJSON(data []byte) error {
   
   if in.ServersServer != nil {
     raw := in.ServersServer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -92782,8 +98230,15 @@ func (out *Location) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -92804,7 +98259,9 @@ func (out *Location) UnmarshalJSON(data []byte) error {
   
   if in.DNSServer != nil {
     raw := in.DNSServer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -92814,8 +98271,15 @@ func (out *Location) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -92925,7 +98389,9 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Name
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -92935,8 +98401,15 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -92961,7 +98434,9 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Version
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -92971,8 +98446,15 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -92997,7 +98479,9 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.FullName
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -93007,8 +98491,15 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -93033,7 +98524,9 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
   
   if in.Doc != nil {
     raw := in.Doc
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -93043,8 +98536,15 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -93070,7 +98570,9 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
   
   if in.Exclude != nil {
     raw := in.Exclude
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -93080,8 +98582,15 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -93102,7 +98611,9 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
   
   if in.Include != nil {
     raw := in.Include
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -93112,8 +98623,15 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -93134,7 +98652,9 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
   
   if in.TopicTopic != nil {
     raw := in.TopicTopic
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -93144,8 +98664,15 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -93171,7 +98698,9 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
   
   if in.ParamsParam != nil {
     raw := in.ParamsParam
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -93181,8 +98710,15 @@ func (out *Metaobject) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -93340,7 +98876,9 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -93350,8 +98888,15 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -93376,7 +98921,9 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -93386,8 +98933,15 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -93413,7 +98967,9 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
   
   if in.Nisdomainname != nil {
     raw := in.Nisdomainname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -93423,8 +98979,15 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -93450,7 +99013,9 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
   
   if in.Ipauniqueid != nil {
     raw := in.Ipauniqueid
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -93460,8 +99025,15 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -93487,7 +99059,9 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
   
   if in.Usercategory != nil {
     raw := in.Usercategory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -93497,8 +99071,15 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -93524,7 +99105,9 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
   
   if in.Hostcategory != nil {
     raw := in.Hostcategory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -93534,8 +99117,15 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -93561,7 +99151,9 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
   
   if in.Externalhost != nil {
     raw := in.Externalhost
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -93571,8 +99163,15 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -93593,7 +99192,9 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
   
   if in.MemberNetgroup != nil {
     raw := in.MemberNetgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -93603,8 +99204,15 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -93625,7 +99233,9 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
   
   if in.MemberofNetgroup != nil {
     raw := in.MemberofNetgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -93635,8 +99245,15 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -93657,7 +99274,9 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
   
   if in.MemberindirectNetgroup != nil {
     raw := in.MemberindirectNetgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -93667,8 +99286,15 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -93694,7 +99320,9 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
   
   if in.MemberuserUser != nil {
     raw := in.MemberuserUser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -93704,8 +99332,15 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -93731,7 +99366,9 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
   
   if in.MemberuserGroup != nil {
     raw := in.MemberuserGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -93741,8 +99378,15 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -93768,7 +99412,9 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
   
   if in.MemberhostHost != nil {
     raw := in.MemberhostHost
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -93778,8 +99424,15 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -93805,7 +99458,9 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
   
   if in.MemberhostHostgroup != nil {
     raw := in.MemberhostHostgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -93815,8 +99470,15 @@ func (out *Netgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -93899,7 +99561,15 @@ func (out *Otpconfig) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipatokentotpauthwindow
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -93909,8 +99579,15 @@ func (out *Otpconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -93939,7 +99616,15 @@ func (out *Otpconfig) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipatokentotpsyncwindow
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -93949,8 +99634,15 @@ func (out *Otpconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -93979,7 +99671,15 @@ func (out *Otpconfig) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipatokenhotpauthwindow
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -93989,8 +99689,15 @@ func (out *Otpconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -94019,7 +99726,15 @@ func (out *Otpconfig) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipatokenhotpsyncwindow
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -94029,8 +99744,15 @@ func (out *Otpconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -94228,7 +99950,9 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipatokenuniqueid
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -94238,8 +99962,15 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -94264,7 +99995,9 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
   
   if in.Type != nil {
     raw := in.Type
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -94274,8 +100007,15 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -94301,7 +100041,9 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -94311,8 +100053,15 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -94338,7 +100087,9 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
   
   if in.Ipatokenowner != nil {
     raw := in.Ipatokenowner
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -94348,8 +100099,15 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -94375,7 +100133,9 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
   
   if in.ManagedbyUser != nil {
     raw := in.ManagedbyUser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -94385,8 +100145,15 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -94412,7 +100179,9 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
   
   if in.Ipatokendisabled != nil {
     raw := in.Ipatokendisabled
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -94422,8 +100191,15 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -94449,7 +100225,17 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
   
   if in.Ipatokennotbefore != nil {
     raw := in.Ipatokennotbefore
-    plainV, plainOk := raw.(time.Time)
+    
+    stringV, stringOk := raw.(string)
+    plainOk := true
+    plainV, plainErr := time.Parse(fmt.Sprintf("%s %s", time.ANSIC, "MST"), stringV)
+    if !stringOk {
+      plainOk = false
+    }
+    if plainErr != nil {
+      plainOk = false
+    }
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []time.Time
     sliceOk := sliceWrapperOk
@@ -94459,8 +100245,15 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(time.Time)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(time.Time))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -94486,7 +100279,17 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
   
   if in.Ipatokennotafter != nil {
     raw := in.Ipatokennotafter
-    plainV, plainOk := raw.(time.Time)
+    
+    stringV, stringOk := raw.(string)
+    plainOk := true
+    plainV, plainErr := time.Parse(fmt.Sprintf("%s %s", time.ANSIC, "MST"), stringV)
+    if !stringOk {
+      plainOk = false
+    }
+    if plainErr != nil {
+      plainOk = false
+    }
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []time.Time
     sliceOk := sliceWrapperOk
@@ -94496,8 +100299,15 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(time.Time)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(time.Time))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -94523,7 +100333,9 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
   
   if in.Ipatokenvendor != nil {
     raw := in.Ipatokenvendor
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -94533,8 +100345,15 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -94560,7 +100379,9 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
   
   if in.Ipatokenmodel != nil {
     raw := in.Ipatokenmodel
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -94570,8 +100391,15 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -94597,7 +100425,9 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
   
   if in.Ipatokenserial != nil {
     raw := in.Ipatokenserial
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -94607,8 +100437,15 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -94634,7 +100471,9 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
   
   if in.Ipatokenotpkey != nil {
     raw := in.Ipatokenotpkey
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -94644,8 +100483,15 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -94671,7 +100517,9 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
   
   if in.Ipatokenotpalgorithm != nil {
     raw := in.Ipatokenotpalgorithm
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -94681,8 +100529,15 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -94708,7 +100563,15 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
   
   if in.Ipatokenotpdigits != nil {
     raw := in.Ipatokenotpdigits
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -94718,8 +100581,15 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -94749,7 +100619,15 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
   
   if in.Ipatokentotpclockoffset != nil {
     raw := in.Ipatokentotpclockoffset
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -94759,8 +100637,15 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -94790,7 +100675,15 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
   
   if in.Ipatokentotptimestep != nil {
     raw := in.Ipatokentotptimestep
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -94800,8 +100693,15 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -94831,7 +100731,15 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
   
   if in.Ipatokenhotpcounter != nil {
     raw := in.Ipatokenhotpcounter
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -94841,8 +100749,15 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -94872,7 +100787,9 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
   
   if in.URI != nil {
     raw := in.URI
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -94882,8 +100799,15 @@ func (out *Otptoken) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -94990,7 +100914,9 @@ func (out *Output) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Name
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -95000,8 +100926,15 @@ func (out *Output) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95026,7 +100959,9 @@ func (out *Output) UnmarshalJSON(data []byte) error {
   
   if in.Doc != nil {
     raw := in.Doc
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -95036,8 +100971,15 @@ func (out *Output) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95063,7 +101005,9 @@ func (out *Output) UnmarshalJSON(data []byte) error {
   
   if in.Exclude != nil {
     raw := in.Exclude
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -95073,8 +101017,15 @@ func (out *Output) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95095,7 +101046,9 @@ func (out *Output) UnmarshalJSON(data []byte) error {
   
   if in.Include != nil {
     raw := in.Include
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -95105,8 +101058,15 @@ func (out *Output) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95127,7 +101087,9 @@ func (out *Output) UnmarshalJSON(data []byte) error {
   
   if in.Type != nil {
     raw := in.Type
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -95137,8 +101099,15 @@ func (out *Output) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95164,7 +101133,9 @@ func (out *Output) UnmarshalJSON(data []byte) error {
   
   if in.Required != nil {
     raw := in.Required
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -95174,8 +101145,15 @@ func (out *Output) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95201,7 +101179,9 @@ func (out *Output) UnmarshalJSON(data []byte) error {
   
   if in.Multivalue != nil {
     raw := in.Multivalue
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -95211,8 +101191,15 @@ func (out *Output) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95407,7 +101394,9 @@ func (out *Param) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Name
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -95417,8 +101406,15 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95443,7 +101439,9 @@ func (out *Param) UnmarshalJSON(data []byte) error {
   
   if in.Doc != nil {
     raw := in.Doc
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -95453,8 +101451,15 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95480,7 +101485,9 @@ func (out *Param) UnmarshalJSON(data []byte) error {
   
   if in.Exclude != nil {
     raw := in.Exclude
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -95490,8 +101497,15 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95512,7 +101526,9 @@ func (out *Param) UnmarshalJSON(data []byte) error {
   
   if in.Include != nil {
     raw := in.Include
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -95522,8 +101538,15 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95544,7 +101567,9 @@ func (out *Param) UnmarshalJSON(data []byte) error {
   
   if in.Type != nil {
     raw := in.Type
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -95554,8 +101579,15 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95581,7 +101613,9 @@ func (out *Param) UnmarshalJSON(data []byte) error {
   
   if in.Required != nil {
     raw := in.Required
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -95591,8 +101625,15 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95618,7 +101659,9 @@ func (out *Param) UnmarshalJSON(data []byte) error {
   
   if in.Multivalue != nil {
     raw := in.Multivalue
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -95628,8 +101671,15 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95655,7 +101705,9 @@ func (out *Param) UnmarshalJSON(data []byte) error {
   
   if in.Alwaysask != nil {
     raw := in.Alwaysask
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -95665,8 +101717,15 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95692,7 +101751,9 @@ func (out *Param) UnmarshalJSON(data []byte) error {
   
   if in.CliMetavar != nil {
     raw := in.CliMetavar
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -95702,8 +101763,15 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95729,7 +101797,9 @@ func (out *Param) UnmarshalJSON(data []byte) error {
   
   if in.CliName != nil {
     raw := in.CliName
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -95739,8 +101809,15 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95766,7 +101843,9 @@ func (out *Param) UnmarshalJSON(data []byte) error {
   
   if in.Confirm != nil {
     raw := in.Confirm
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -95776,8 +101855,15 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95803,7 +101889,9 @@ func (out *Param) UnmarshalJSON(data []byte) error {
   
   if in.Default != nil {
     raw := in.Default
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -95813,8 +101901,15 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95835,7 +101930,9 @@ func (out *Param) UnmarshalJSON(data []byte) error {
   
   if in.DefaultFromParam != nil {
     raw := in.DefaultFromParam
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -95845,8 +101942,15 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95867,7 +101971,9 @@ func (out *Param) UnmarshalJSON(data []byte) error {
   
   if in.Label != nil {
     raw := in.Label
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -95877,8 +101983,15 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95904,7 +102017,9 @@ func (out *Param) UnmarshalJSON(data []byte) error {
   
   if in.NoConvert != nil {
     raw := in.NoConvert
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -95914,8 +102029,15 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95941,7 +102063,9 @@ func (out *Param) UnmarshalJSON(data []byte) error {
   
   if in.OptionGroup != nil {
     raw := in.OptionGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -95951,8 +102075,15 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -95978,7 +102109,9 @@ func (out *Param) UnmarshalJSON(data []byte) error {
   
   if in.Sensitive != nil {
     raw := in.Sensitive
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -95988,8 +102121,15 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96015,7 +102155,9 @@ func (out *Param) UnmarshalJSON(data []byte) error {
   
   if in.Positional != nil {
     raw := in.Positional
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -96025,8 +102167,15 @@ func (out *Param) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96261,7 +102410,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -96271,8 +102422,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96297,7 +102455,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if in.Ipapermright != nil {
     raw := in.Ipapermright
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -96307,8 +102467,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96329,7 +102496,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if in.Attrs != nil {
     raw := in.Attrs
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -96339,8 +102508,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96361,7 +102537,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if in.Ipapermincludedattr != nil {
     raw := in.Ipapermincludedattr
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -96371,8 +102549,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96393,7 +102578,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if in.Ipapermexcludedattr != nil {
     raw := in.Ipapermexcludedattr
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -96403,8 +102590,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96425,7 +102619,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if in.Ipapermdefaultattr != nil {
     raw := in.Ipapermdefaultattr
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -96435,8 +102631,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96457,7 +102660,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipapermbindruletype
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -96467,8 +102672,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96493,7 +102705,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if in.Ipapermlocation != nil {
     raw := in.Ipapermlocation
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -96503,8 +102717,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96530,7 +102751,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if in.Extratargetfilter != nil {
     raw := in.Extratargetfilter
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -96540,8 +102763,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96562,7 +102792,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if in.Ipapermtargetfilter != nil {
     raw := in.Ipapermtargetfilter
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -96572,8 +102804,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96594,7 +102833,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if in.Ipapermtarget != nil {
     raw := in.Ipapermtarget
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -96604,8 +102845,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96631,7 +102879,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if in.Ipapermtargetto != nil {
     raw := in.Ipapermtargetto
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -96641,8 +102891,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96668,7 +102925,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if in.Ipapermtargetfrom != nil {
     raw := in.Ipapermtargetfrom
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -96678,8 +102937,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96705,7 +102971,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if in.Memberof != nil {
     raw := in.Memberof
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -96715,8 +102983,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96737,7 +103012,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if in.Targetgroup != nil {
     raw := in.Targetgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -96747,8 +103024,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96774,7 +103058,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if in.Type != nil {
     raw := in.Type
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -96784,8 +103070,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96811,7 +103104,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if in.Permissions != nil {
     raw := in.Permissions
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -96821,8 +103116,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96843,7 +103145,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if in.Filter != nil {
     raw := in.Filter
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -96853,8 +103157,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96875,7 +103186,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if in.Subtree != nil {
     raw := in.Subtree
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -96885,8 +103198,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96907,7 +103227,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipapermissiontype
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -96917,8 +103239,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96943,7 +103272,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Aci
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -96953,8 +103284,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -96979,7 +103317,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if in.MemberPrivilege != nil {
     raw := in.MemberPrivilege
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -96989,8 +103329,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -97011,7 +103358,9 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
   
   if in.MemberindirectRole != nil {
     raw := in.MemberindirectRole
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -97021,8 +103370,15 @@ func (out *Permission) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -97089,7 +103445,9 @@ func (out *Pkinit) UnmarshalJSON(data []byte) error {
   
   if in.ServerServer != nil {
     raw := in.ServerServer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -97099,8 +103457,15 @@ func (out *Pkinit) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -97126,7 +103491,9 @@ func (out *Pkinit) UnmarshalJSON(data []byte) error {
   
   if in.Status != nil {
     raw := in.Status
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -97136,8 +103503,15 @@ func (out *Pkinit) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -97220,7 +103594,9 @@ func (out *Privilege) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -97230,8 +103606,15 @@ func (out *Privilege) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -97256,7 +103639,9 @@ func (out *Privilege) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -97266,8 +103651,15 @@ func (out *Privilege) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -97293,7 +103685,9 @@ func (out *Privilege) UnmarshalJSON(data []byte) error {
   
   if in.MemberofPermission != nil {
     raw := in.MemberofPermission
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -97303,8 +103697,15 @@ func (out *Privilege) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -97325,7 +103726,9 @@ func (out *Privilege) UnmarshalJSON(data []byte) error {
   
   if in.MemberRole != nil {
     raw := in.MemberRole
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -97335,8 +103738,15 @@ func (out *Privilege) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -97494,7 +103904,9 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
   
   if in.Cn != nil {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -97504,8 +103916,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -97531,7 +103950,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
   
   if in.Krbmaxpwdlife != nil {
     raw := in.Krbmaxpwdlife
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -97541,8 +103968,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -97572,7 +104006,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
   
   if in.Krbminpwdlife != nil {
     raw := in.Krbminpwdlife
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -97582,8 +104024,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -97613,7 +104062,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
   
   if in.Krbpwdhistorylength != nil {
     raw := in.Krbpwdhistorylength
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -97623,8 +104080,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -97654,7 +104118,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
   
   if in.Krbpwdmindiffchars != nil {
     raw := in.Krbpwdmindiffchars
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -97664,8 +104136,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -97695,7 +104174,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
   
   if in.Krbpwdminlength != nil {
     raw := in.Krbpwdminlength
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -97705,8 +104192,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -97736,7 +104230,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cospriority
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -97746,8 +104248,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -97776,7 +104285,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
   
   if in.Krbpwdmaxfailure != nil {
     raw := in.Krbpwdmaxfailure
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -97786,8 +104303,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -97817,7 +104341,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
   
   if in.Krbpwdfailurecountinterval != nil {
     raw := in.Krbpwdfailurecountinterval
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -97827,8 +104359,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -97858,7 +104397,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
   
   if in.Krbpwdlockoutduration != nil {
     raw := in.Krbpwdlockoutduration
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -97868,8 +104415,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -97899,7 +104453,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
   
   if in.Ipapwdmaxrepeat != nil {
     raw := in.Ipapwdmaxrepeat
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -97909,8 +104471,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -97940,7 +104509,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
   
   if in.Ipapwdmaxsequence != nil {
     raw := in.Ipapwdmaxsequence
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -97950,8 +104527,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -97981,7 +104565,9 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
   
   if in.Ipapwddictcheck != nil {
     raw := in.Ipapwddictcheck
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -97991,8 +104577,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -98018,7 +104611,9 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
   
   if in.Ipapwdusercheck != nil {
     raw := in.Ipapwdusercheck
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -98028,8 +104623,15 @@ func (out *Pwpolicy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -98136,7 +104738,9 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -98146,8 +104750,15 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -98172,7 +104783,9 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -98182,8 +104795,15 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -98209,7 +104829,9 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipatokenradiusserver
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -98219,8 +104841,15 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -98245,7 +104874,9 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipatokenradiussecret
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -98255,8 +104886,15 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -98281,7 +104919,15 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
   
   if in.Ipatokenradiustimeout != nil {
     raw := in.Ipatokenradiustimeout
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -98291,8 +104937,15 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -98322,7 +104975,15 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
   
   if in.Ipatokenradiusretries != nil {
     raw := in.Ipatokenradiusretries
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -98332,8 +104993,15 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -98363,7 +105031,9 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
   
   if in.Ipatokenusermapattribute != nil {
     raw := in.Ipatokenusermapattribute
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -98373,8 +105043,15 @@ func (out *Radiusproxy) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -98449,7 +105126,9 @@ func (out *Realmdomains) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Associateddomain
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -98459,8 +105138,15 @@ func (out *Realmdomains) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -98485,7 +105171,9 @@ func (out *Realmdomains) UnmarshalJSON(data []byte) error {
   
   if in.AddDomain != nil {
     raw := in.AddDomain
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -98495,8 +105183,15 @@ func (out *Realmdomains) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -98522,7 +105217,9 @@ func (out *Realmdomains) UnmarshalJSON(data []byte) error {
   
   if in.DelDomain != nil {
     raw := in.DelDomain
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -98532,8 +105229,15 @@ func (out *Realmdomains) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -98656,7 +105360,9 @@ func (out *Role) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -98666,8 +105372,15 @@ func (out *Role) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -98692,7 +105405,9 @@ func (out *Role) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -98702,8 +105417,15 @@ func (out *Role) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -98729,7 +105451,9 @@ func (out *Role) UnmarshalJSON(data []byte) error {
   
   if in.MemberUser != nil {
     raw := in.MemberUser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -98739,8 +105463,15 @@ func (out *Role) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -98761,7 +105492,9 @@ func (out *Role) UnmarshalJSON(data []byte) error {
   
   if in.MemberGroup != nil {
     raw := in.MemberGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -98771,8 +105504,15 @@ func (out *Role) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -98793,7 +105533,9 @@ func (out *Role) UnmarshalJSON(data []byte) error {
   
   if in.MemberHost != nil {
     raw := in.MemberHost
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -98803,8 +105545,15 @@ func (out *Role) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -98825,7 +105574,9 @@ func (out *Role) UnmarshalJSON(data []byte) error {
   
   if in.MemberHostgroup != nil {
     raw := in.MemberHostgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -98835,8 +105586,15 @@ func (out *Role) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -98857,7 +105615,9 @@ func (out *Role) UnmarshalJSON(data []byte) error {
   
   if in.MemberofPrivilege != nil {
     raw := in.MemberofPrivilege
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -98867,8 +105627,15 @@ func (out *Role) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -98889,7 +105656,9 @@ func (out *Role) UnmarshalJSON(data []byte) error {
   
   if in.MemberService != nil {
     raw := in.MemberService
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -98899,8 +105668,15 @@ func (out *Role) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -98921,7 +105697,9 @@ func (out *Role) UnmarshalJSON(data []byte) error {
   
   if in.MemberIdoverrideuser != nil {
     raw := in.MemberIdoverrideuser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -98931,8 +105709,15 @@ func (out *Role) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -99010,7 +105795,9 @@ func (out *Selfservice) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Aciname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -99020,8 +105807,15 @@ func (out *Selfservice) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -99046,7 +105840,9 @@ func (out *Selfservice) UnmarshalJSON(data []byte) error {
   
   if in.Permissions != nil {
     raw := in.Permissions
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -99056,8 +105852,15 @@ func (out *Selfservice) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -99078,7 +105881,9 @@ func (out *Selfservice) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Attrs
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -99088,8 +105893,15 @@ func (out *Selfservice) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -99114,7 +105926,9 @@ func (out *Selfservice) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Aci
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -99124,8 +105938,15 @@ func (out *Selfservice) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -99263,7 +106084,9 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -99273,8 +106096,15 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -99299,7 +106129,9 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipaselinuxuser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -99309,8 +106141,15 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -99335,7 +106174,9 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
   
   if in.Seealso != nil {
     raw := in.Seealso
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -99345,8 +106186,15 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -99372,7 +106220,9 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
   
   if in.Usercategory != nil {
     raw := in.Usercategory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -99382,8 +106232,15 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -99409,7 +106266,9 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
   
   if in.Hostcategory != nil {
     raw := in.Hostcategory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -99419,8 +106278,15 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -99446,7 +106312,9 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -99456,8 +106324,15 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -99483,7 +106358,9 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
   
   if in.Ipaenabledflag != nil {
     raw := in.Ipaenabledflag
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -99493,8 +106370,15 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -99520,7 +106404,9 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
   
   if in.MemberuserUser != nil {
     raw := in.MemberuserUser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -99530,8 +106416,15 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -99557,7 +106450,9 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
   
   if in.MemberuserGroup != nil {
     raw := in.MemberuserGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -99567,8 +106462,15 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -99594,7 +106496,9 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
   
   if in.MemberhostHost != nil {
     raw := in.MemberhostHost
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -99604,8 +106508,15 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -99631,7 +106542,9 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
   
   if in.MemberhostHostgroup != nil {
     raw := in.MemberhostHostgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -99641,8 +106554,15 @@ func (out *Selinuxusermap) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -99765,7 +106685,9 @@ func (out *Server) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -99775,8 +106697,15 @@ func (out *Server) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -99801,7 +106730,9 @@ func (out *Server) UnmarshalJSON(data []byte) error {
   
   if in.Iparepltopomanagedsuffix != nil {
     raw := in.Iparepltopomanagedsuffix
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -99811,8 +106742,15 @@ func (out *Server) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -99833,7 +106771,9 @@ func (out *Server) UnmarshalJSON(data []byte) error {
   
   if in.IparepltopomanagedsuffixTopologysuffix != nil {
     raw := in.IparepltopomanagedsuffixTopologysuffix
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -99843,8 +106783,15 @@ func (out *Server) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -99865,7 +106812,15 @@ func (out *Server) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipamindomainlevel
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -99875,8 +106830,15 @@ func (out *Server) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -99905,7 +106867,15 @@ func (out *Server) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipamaxdomainlevel
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -99915,8 +106885,15 @@ func (out *Server) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -99945,7 +106922,9 @@ func (out *Server) UnmarshalJSON(data []byte) error {
   
   if in.IpalocationLocation != nil {
     raw := in.IpalocationLocation
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -99955,8 +106934,15 @@ func (out *Server) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -99982,7 +106968,15 @@ func (out *Server) UnmarshalJSON(data []byte) error {
   
   if in.Ipaserviceweight != nil {
     raw := in.Ipaserviceweight
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -99992,8 +106986,15 @@ func (out *Server) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -100023,7 +107024,9 @@ func (out *Server) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.ServiceRelativeWeight
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -100033,8 +107036,15 @@ func (out *Server) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -100059,7 +107069,9 @@ func (out *Server) UnmarshalJSON(data []byte) error {
   
   if in.EnabledRoleServrole != nil {
     raw := in.EnabledRoleServrole
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -100069,8 +107081,15 @@ func (out *Server) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -100140,7 +107159,9 @@ func (out *ServerRole) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.ServerServer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -100150,8 +107171,15 @@ func (out *ServerRole) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -100176,7 +107204,9 @@ func (out *ServerRole) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.RoleServrole
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -100186,8 +107216,15 @@ func (out *ServerRole) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -100212,7 +107249,9 @@ func (out *ServerRole) UnmarshalJSON(data []byte) error {
   
   if in.Status != nil {
     raw := in.Status
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -100222,8 +107261,15 @@ func (out *ServerRole) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -100498,7 +107544,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Krbcanonicalname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -100508,8 +107556,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -100534,7 +107589,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if in.Krbprincipalname != nil {
     raw := in.Krbprincipalname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -100544,8 +107601,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -100566,7 +107630,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if in.Usercertificate != nil {
     raw := in.Usercertificate
+    
     plainV, plainOk := raw.(interface{})
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []interface{}
     sliceOk := sliceWrapperOk
@@ -100576,8 +107642,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(interface{})
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(interface{}))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -100598,7 +107671,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Subject
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -100608,8 +107683,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -100634,7 +107716,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.SerialNumber
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -100644,8 +107728,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -100670,7 +107761,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.SerialNumberHex
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -100680,8 +107773,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -100706,7 +107806,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Issuer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -100716,8 +107818,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -100742,7 +107851,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.ValidNotBefore
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -100752,8 +107863,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -100778,7 +107896,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.ValidNotAfter
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -100788,8 +107908,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -100814,7 +107941,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Sha1Fingerprint
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -100824,8 +107953,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -100850,7 +107986,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Sha256Fingerprint
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -100860,8 +107998,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -100886,7 +108031,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if in.RevocationReason != nil {
     raw := in.RevocationReason
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -100896,8 +108043,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -100923,7 +108077,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if in.Ipakrbauthzdata != nil {
     raw := in.Ipakrbauthzdata
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -100933,8 +108089,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -100955,7 +108118,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if in.Krbprincipalauthind != nil {
     raw := in.Krbprincipalauthind
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -100965,8 +108130,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -100987,7 +108159,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if in.Ipakrbrequirespreauth != nil {
     raw := in.Ipakrbrequirespreauth
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -100997,8 +108171,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -101024,7 +108205,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if in.Ipakrbokasdelegate != nil {
     raw := in.Ipakrbokasdelegate
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -101034,8 +108217,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -101061,7 +108251,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if in.Ipakrboktoauthasdelegate != nil {
     raw := in.Ipakrboktoauthasdelegate
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -101071,8 +108263,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -101098,7 +108297,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if in.MemberofRole != nil {
     raw := in.MemberofRole
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -101108,8 +108309,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -101130,7 +108338,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if in.HasKeytab != nil {
     raw := in.HasKeytab
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -101140,8 +108350,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -101167,7 +108384,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.ManagedbyHost
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -101177,8 +108396,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -101203,7 +108429,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.IpaallowedtoperformReadKeysUser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -101213,8 +108441,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -101239,7 +108474,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.IpaallowedtoperformReadKeysGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -101249,8 +108486,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -101275,7 +108519,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.IpaallowedtoperformReadKeysHost
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -101285,8 +108531,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -101311,7 +108564,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.IpaallowedtoperformReadKeysHostgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -101321,8 +108576,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -101347,7 +108609,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.IpaallowedtoperformWriteKeysUser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -101357,8 +108621,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -101383,7 +108654,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.IpaallowedtoperformWriteKeysGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -101393,8 +108666,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -101419,7 +108699,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.IpaallowedtoperformWriteKeysHost
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -101429,8 +108711,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -101455,7 +108744,9 @@ func (out *Service) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.IpaallowedtoperformWriteKeysHostgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -101465,8 +108756,15 @@ func (out *Service) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -101548,7 +108846,9 @@ func (out *Servicedelegationrule) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -101558,8 +108858,15 @@ func (out *Servicedelegationrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -101584,7 +108891,9 @@ func (out *Servicedelegationrule) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.IpaallowedtargetServicedelegationtarget
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -101594,8 +108903,15 @@ func (out *Servicedelegationrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -101620,7 +108936,9 @@ func (out *Servicedelegationrule) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipaallowedtoimpersonate
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -101630,8 +108948,15 @@ func (out *Servicedelegationrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -101656,7 +108981,9 @@ func (out *Servicedelegationrule) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Memberprincipal
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -101666,8 +108993,15 @@ func (out *Servicedelegationrule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -101749,7 +109083,9 @@ func (out *Servicedelegationtarget) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -101759,8 +109095,15 @@ func (out *Servicedelegationtarget) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -101785,7 +109128,9 @@ func (out *Servicedelegationtarget) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.IpaallowedtargetServicedelegationtarget
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -101795,8 +109140,15 @@ func (out *Servicedelegationtarget) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -101821,7 +109173,9 @@ func (out *Servicedelegationtarget) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipaallowedtoimpersonate
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -101831,8 +109185,15 @@ func (out *Servicedelegationtarget) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -101857,7 +109218,9 @@ func (out *Servicedelegationtarget) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Memberprincipal
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -101867,8 +109230,15 @@ func (out *Servicedelegationtarget) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -101926,7 +109296,9 @@ func (out *Servrole) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Name
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -101936,8 +109308,15 @@ func (out *Servrole) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -102467,7 +109846,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.UID
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -102477,8 +109858,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -102503,7 +109891,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Givenname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -102513,8 +109903,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -102539,7 +109936,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Sn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -102549,8 +109948,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -102575,7 +109981,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -102585,8 +109993,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -102611,7 +110026,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Displayname != nil {
     raw := in.Displayname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -102621,8 +110038,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -102648,7 +110072,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Initials != nil {
     raw := in.Initials
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -102658,8 +110084,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -102685,7 +110118,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Homedirectory != nil {
     raw := in.Homedirectory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -102695,8 +110130,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -102722,7 +110164,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Gecos != nil {
     raw := in.Gecos
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -102732,8 +110176,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -102759,7 +110210,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Loginshell != nil {
     raw := in.Loginshell
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -102769,8 +110222,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -102796,7 +110256,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Krbcanonicalname != nil {
     raw := in.Krbcanonicalname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -102806,8 +110268,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -102833,7 +110302,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Krbprincipalname != nil {
     raw := in.Krbprincipalname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -102843,8 +110314,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -102865,7 +110343,17 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Krbprincipalexpiration != nil {
     raw := in.Krbprincipalexpiration
-    plainV, plainOk := raw.(time.Time)
+    
+    stringV, stringOk := raw.(string)
+    plainOk := true
+    plainV, plainErr := time.Parse(fmt.Sprintf("%s %s", time.ANSIC, "MST"), stringV)
+    if !stringOk {
+      plainOk = false
+    }
+    if plainErr != nil {
+      plainOk = false
+    }
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []time.Time
     sliceOk := sliceWrapperOk
@@ -102875,8 +110363,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(time.Time)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(time.Time))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -102902,7 +110397,17 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Krbpasswordexpiration != nil {
     raw := in.Krbpasswordexpiration
-    plainV, plainOk := raw.(time.Time)
+    
+    stringV, stringOk := raw.(string)
+    plainOk := true
+    plainV, plainErr := time.Parse(fmt.Sprintf("%s %s", time.ANSIC, "MST"), stringV)
+    if !stringOk {
+      plainOk = false
+    }
+    if plainErr != nil {
+      plainOk = false
+    }
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []time.Time
     sliceOk := sliceWrapperOk
@@ -102912,8 +110417,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(time.Time)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(time.Time))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -102939,7 +110451,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Mail != nil {
     raw := in.Mail
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -102949,8 +110463,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -102971,7 +110492,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Userpassword != nil {
     raw := in.Userpassword
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -102981,8 +110504,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103008,7 +110538,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Random != nil {
     raw := in.Random
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -103018,8 +110550,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103045,7 +110584,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Randompassword != nil {
     raw := in.Randompassword
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103055,8 +110596,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103082,7 +110630,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Uidnumber != nil {
     raw := in.Uidnumber
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -103092,8 +110648,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -103123,7 +110686,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Gidnumber != nil {
     raw := in.Gidnumber
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -103133,8 +110704,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -103164,7 +110742,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Street != nil {
     raw := in.Street
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103174,8 +110754,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103201,7 +110788,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.L != nil {
     raw := in.L
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103211,8 +110800,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103238,7 +110834,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.St != nil {
     raw := in.St
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103248,8 +110846,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103275,7 +110880,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Postalcode != nil {
     raw := in.Postalcode
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103285,8 +110892,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103312,7 +110926,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Telephonenumber != nil {
     raw := in.Telephonenumber
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103322,8 +110938,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103344,7 +110967,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Mobile != nil {
     raw := in.Mobile
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103354,8 +110979,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103376,7 +111008,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Pager != nil {
     raw := in.Pager
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103386,8 +111020,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103408,7 +111049,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Facsimiletelephonenumber != nil {
     raw := in.Facsimiletelephonenumber
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103418,8 +111061,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103440,7 +111090,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Ou != nil {
     raw := in.Ou
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103450,8 +111102,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103477,7 +111136,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Title != nil {
     raw := in.Title
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103487,8 +111148,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103514,7 +111182,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Manager != nil {
     raw := in.Manager
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103524,8 +111194,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103551,7 +111228,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Carlicense != nil {
     raw := in.Carlicense
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103561,8 +111240,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103583,7 +111269,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Ipasshpubkey != nil {
     raw := in.Ipasshpubkey
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103593,8 +111281,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103615,7 +111310,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Sshpubkeyfp != nil {
     raw := in.Sshpubkeyfp
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103625,8 +111322,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103647,7 +111351,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Ipauserauthtype != nil {
     raw := in.Ipauserauthtype
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103657,8 +111363,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103679,7 +111392,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Userclass != nil {
     raw := in.Userclass
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103689,8 +111404,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103711,7 +111433,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Ipatokenradiusconfiglink != nil {
     raw := in.Ipatokenradiusconfiglink
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103721,8 +111445,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103748,7 +111479,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Ipatokenradiususername != nil {
     raw := in.Ipatokenradiususername
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103758,8 +111491,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103785,7 +111525,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Departmentnumber != nil {
     raw := in.Departmentnumber
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103795,8 +111537,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103817,7 +111566,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Employeenumber != nil {
     raw := in.Employeenumber
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103827,8 +111578,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103854,7 +111612,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Employeetype != nil {
     raw := in.Employeetype
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103864,8 +111624,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103891,7 +111658,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Preferredlanguage != nil {
     raw := in.Preferredlanguage
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103901,8 +111670,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103928,7 +111704,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Usercertificate != nil {
     raw := in.Usercertificate
+    
     plainV, plainOk := raw.(interface{})
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []interface{}
     sliceOk := sliceWrapperOk
@@ -103938,8 +111716,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(interface{})
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(interface{}))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103960,7 +111745,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Ipacertmapdata != nil {
     raw := in.Ipacertmapdata
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -103970,8 +111757,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -103992,7 +111786,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Ipantlogonscript != nil {
     raw := in.Ipantlogonscript
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -104002,8 +111798,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -104029,7 +111832,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Ipantprofilepath != nil {
     raw := in.Ipantprofilepath
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -104039,8 +111844,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -104066,7 +111878,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Ipanthomedirectory != nil {
     raw := in.Ipanthomedirectory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -104076,8 +111890,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -104103,7 +111924,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.Ipanthomedirectorydrive != nil {
     raw := in.Ipanthomedirectorydrive
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -104113,8 +111936,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -104140,7 +111970,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.HasPassword != nil {
     raw := in.HasPassword
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -104150,8 +111982,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -104177,7 +112016,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.MemberofGroup != nil {
     raw := in.MemberofGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -104187,8 +112028,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -104209,7 +112057,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.MemberofRole != nil {
     raw := in.MemberofRole
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -104219,8 +112069,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -104241,7 +112098,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.MemberofNetgroup != nil {
     raw := in.MemberofNetgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -104251,8 +112110,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -104273,7 +112139,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.MemberofSudorule != nil {
     raw := in.MemberofSudorule
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -104283,8 +112151,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -104305,7 +112180,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.MemberofHbacrule != nil {
     raw := in.MemberofHbacrule
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -104315,8 +112192,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -104337,7 +112221,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.MemberofSubid != nil {
     raw := in.MemberofSubid
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -104347,8 +112233,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -104369,7 +112262,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectGroup != nil {
     raw := in.MemberofindirectGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -104379,8 +112274,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -104406,7 +112308,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectNetgroup != nil {
     raw := in.MemberofindirectNetgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -104416,8 +112320,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -104443,7 +112354,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectRole != nil {
     raw := in.MemberofindirectRole
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -104453,8 +112366,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -104480,7 +112400,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectSudorule != nil {
     raw := in.MemberofindirectSudorule
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -104490,8 +112412,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -104517,7 +112446,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectHbacrule != nil {
     raw := in.MemberofindirectHbacrule
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -104527,8 +112458,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -104554,7 +112492,9 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
   
   if in.HasKeytab != nil {
     raw := in.HasKeytab
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -104564,8 +112504,15 @@ func (out *Stageuser) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -104672,7 +112619,9 @@ func (out *Subid) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipauniqueid
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -104682,8 +112631,15 @@ func (out *Subid) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -104708,7 +112664,9 @@ func (out *Subid) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -104718,8 +112676,15 @@ func (out *Subid) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -104745,7 +112710,9 @@ func (out *Subid) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipaowner
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -104755,8 +112722,15 @@ func (out *Subid) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -104781,7 +112755,15 @@ func (out *Subid) UnmarshalJSON(data []byte) error {
   
   if in.Ipasubuidnumber != nil {
     raw := in.Ipasubuidnumber
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -104791,8 +112773,15 @@ func (out *Subid) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -104822,7 +112811,15 @@ func (out *Subid) UnmarshalJSON(data []byte) error {
   
   if in.Ipasubuidcount != nil {
     raw := in.Ipasubuidcount
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -104832,8 +112829,15 @@ func (out *Subid) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -104863,7 +112867,15 @@ func (out *Subid) UnmarshalJSON(data []byte) error {
   
   if in.Ipasubgidnumber != nil {
     raw := in.Ipasubgidnumber
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -104873,8 +112885,15 @@ func (out *Subid) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -104904,7 +112923,15 @@ func (out *Subid) UnmarshalJSON(data []byte) error {
   
   if in.Ipasubgidcount != nil {
     raw := in.Ipasubgidcount
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -104914,8 +112941,15 @@ func (out *Subid) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -104994,7 +113028,9 @@ func (out *Sudocmd) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Sudocmd
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -105004,8 +113040,15 @@ func (out *Sudocmd) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -105030,7 +113073,9 @@ func (out *Sudocmd) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -105040,8 +113085,15 @@ func (out *Sudocmd) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -105067,7 +113119,9 @@ func (out *Sudocmd) UnmarshalJSON(data []byte) error {
   
   if in.MemberofSudocmdgroup != nil {
     raw := in.MemberofSudocmdgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -105077,8 +113131,15 @@ func (out *Sudocmd) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -105164,7 +113225,9 @@ func (out *Sudocmdgroup) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -105174,8 +113237,15 @@ func (out *Sudocmdgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -105200,7 +113270,9 @@ func (out *Sudocmdgroup) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -105210,8 +113282,15 @@ func (out *Sudocmdgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -105237,7 +113316,9 @@ func (out *Sudocmdgroup) UnmarshalJSON(data []byte) error {
   
   if in.MembercmdSudocmd != nil {
     raw := in.MembercmdSudocmd
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -105247,8 +113328,15 @@ func (out *Sudocmdgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -105274,7 +113362,9 @@ func (out *Sudocmdgroup) UnmarshalJSON(data []byte) error {
   
   if in.MembercmdSudocmdgroup != nil {
     raw := in.MembercmdSudocmdgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -105284,8 +113374,15 @@ func (out *Sudocmdgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -105311,7 +113408,9 @@ func (out *Sudocmdgroup) UnmarshalJSON(data []byte) error {
   
   if in.MemberSudocmd != nil {
     raw := in.MemberSudocmd
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -105321,8 +113420,15 @@ func (out *Sudocmdgroup) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -105584,7 +113690,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -105594,8 +113702,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -105620,7 +113735,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -105630,8 +113747,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -105657,7 +113781,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.Ipaenabledflag != nil {
     raw := in.Ipaenabledflag
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -105667,8 +113793,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -105694,7 +113827,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.Usercategory != nil {
     raw := in.Usercategory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -105704,8 +113839,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -105731,7 +113873,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.Hostcategory != nil {
     raw := in.Hostcategory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -105741,8 +113885,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -105768,7 +113919,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.Cmdcategory != nil {
     raw := in.Cmdcategory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -105778,8 +113931,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -105805,7 +113965,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.Ipasudorunasusercategory != nil {
     raw := in.Ipasudorunasusercategory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -105815,8 +113977,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -105842,7 +114011,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.Ipasudorunasgroupcategory != nil {
     raw := in.Ipasudorunasgroupcategory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -105852,8 +114023,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -105879,7 +114057,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.Sudoorder != nil {
     raw := in.Sudoorder
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -105889,8 +114075,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -105920,7 +114113,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.MemberuserUser != nil {
     raw := in.MemberuserUser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -105930,8 +114125,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -105957,7 +114159,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.MemberuserGroup != nil {
     raw := in.MemberuserGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -105967,8 +114171,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -105994,7 +114205,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.Externaluser != nil {
     raw := in.Externaluser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106004,8 +114217,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -106031,7 +114251,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.MemberhostHost != nil {
     raw := in.MemberhostHost
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106041,8 +114263,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -106068,7 +114297,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.MemberhostHostgroup != nil {
     raw := in.MemberhostHostgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106078,8 +114309,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -106105,7 +114343,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Hostmask
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106115,8 +114355,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -106141,7 +114388,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.Externalhost != nil {
     raw := in.Externalhost
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106151,8 +114400,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -106173,7 +114429,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.MemberallowcmdSudocmd != nil {
     raw := in.MemberallowcmdSudocmd
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106183,8 +114441,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -106210,7 +114475,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.MemberdenycmdSudocmd != nil {
     raw := in.MemberdenycmdSudocmd
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106220,8 +114487,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -106247,7 +114521,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.MemberallowcmdSudocmdgroup != nil {
     raw := in.MemberallowcmdSudocmdgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106257,8 +114533,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -106284,7 +114567,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.MemberdenycmdSudocmdgroup != nil {
     raw := in.MemberdenycmdSudocmdgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106294,8 +114579,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -106321,7 +114613,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.IpasudorunasUser != nil {
     raw := in.IpasudorunasUser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106331,8 +114625,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -106358,7 +114659,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.IpasudorunasGroup != nil {
     raw := in.IpasudorunasGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106368,8 +114671,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -106395,7 +114705,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.Ipasudorunasextuser != nil {
     raw := in.Ipasudorunasextuser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106405,8 +114717,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -106432,7 +114751,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.Ipasudorunasextusergroup != nil {
     raw := in.Ipasudorunasextusergroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106442,8 +114763,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -106469,7 +114797,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.IpasudorunasgroupGroup != nil {
     raw := in.IpasudorunasgroupGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106479,8 +114809,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -106506,7 +114843,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.Ipasudorunasextgroup != nil {
     raw := in.Ipasudorunasextgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106516,8 +114855,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -106543,7 +114889,9 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
   
   if in.Ipasudoopt != nil {
     raw := in.Ipasudoopt
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106553,8 +114901,15 @@ func (out *Sudorule) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -106661,7 +115016,9 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Name
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106671,8 +115028,15 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -106697,7 +115061,9 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Version
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106707,8 +115073,15 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -106733,7 +115106,9 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.FullName
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106743,8 +115118,15 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -106769,7 +115151,9 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
   
   if in.Doc != nil {
     raw := in.Doc
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106779,8 +115163,15 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -106806,7 +115197,9 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
   
   if in.Exclude != nil {
     raw := in.Exclude
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106816,8 +115209,15 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -106838,7 +115238,9 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
   
   if in.Include != nil {
     raw := in.Include
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106848,8 +115250,15 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -106870,7 +115279,9 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
   
   if in.TopicTopic != nil {
     raw := in.TopicTopic
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -106880,8 +115291,15 @@ func (out *Topic) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -107004,7 +115422,9 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -107014,8 +115434,15 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -107040,7 +115467,9 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Iparepltoposegmentleftnode
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -107050,8 +115479,15 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -107076,7 +115512,9 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Iparepltoposegmentrightnode
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -107086,8 +115524,15 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -107112,7 +115557,9 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Iparepltoposegmentdirection
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -107122,8 +115569,15 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -107148,7 +115602,9 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
   
   if in.Nsds5replicastripattrs != nil {
     raw := in.Nsds5replicastripattrs
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -107158,8 +115614,15 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -107185,7 +115648,9 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
   
   if in.Nsds5replicatedattributelist != nil {
     raw := in.Nsds5replicatedattributelist
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -107195,8 +115660,15 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -107222,7 +115694,9 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
   
   if in.Nsds5replicatedattributelisttotal != nil {
     raw := in.Nsds5replicatedattributelisttotal
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -107232,8 +115706,15 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -107259,7 +115740,15 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
   
   if in.Nsds5replicatimeout != nil {
     raw := in.Nsds5replicatimeout
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -107269,8 +115758,15 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -107300,7 +115796,9 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
   
   if in.Nsds5replicaenabled != nil {
     raw := in.Nsds5replicaenabled
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -107310,8 +115808,15 @@ func (out *Topologysegment) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -107378,7 +115883,9 @@ func (out *Topologysuffix) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -107388,8 +115895,15 @@ func (out *Topologysuffix) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -107414,7 +115928,9 @@ func (out *Topologysuffix) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Iparepltopoconfroot
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -107424,8 +115940,15 @@ func (out *Topologysuffix) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -107547,7 +116070,9 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -107557,8 +116082,15 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -107583,7 +116115,9 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipantflatname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -107593,8 +116127,15 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -107619,7 +116160,9 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipanttrusteddomainsid
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -107629,8 +116172,15 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -107655,7 +116205,9 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
   
   if in.Ipantsidblacklistincoming != nil {
     raw := in.Ipantsidblacklistincoming
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -107665,8 +116217,15 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -107687,7 +116246,9 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
   
   if in.Ipantsidblacklistoutgoing != nil {
     raw := in.Ipantsidblacklistoutgoing
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -107697,8 +116258,15 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -107719,7 +116287,9 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Trustdirection
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -107729,8 +116299,15 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -107755,7 +116332,9 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Trusttype
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -107765,8 +116344,15 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -107791,7 +116377,9 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Truststatus
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -107801,8 +116389,15 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -107827,7 +116422,9 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
   
   if in.Ipantadditionalsuffixes != nil {
     raw := in.Ipantadditionalsuffixes
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -107837,8 +116434,15 @@ func (out *Trust) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -107940,7 +116544,9 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -107950,8 +116556,15 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -107976,7 +116589,9 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipantsecurityidentifier
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -107986,8 +116601,15 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -108012,7 +116634,9 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipantflatname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -108022,8 +116646,15 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -108048,7 +116679,9 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipantdomainguid
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -108058,8 +116691,15 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -108084,7 +116724,9 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Ipantfallbackprimarygroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -108094,8 +116736,15 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -108120,7 +116769,9 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
   
   if in.AdTrustAgentServer != nil {
     raw := in.AdTrustAgentServer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -108130,8 +116781,15 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -108152,7 +116810,9 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
   
   if in.AdTrustControllerServer != nil {
     raw := in.AdTrustControllerServer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -108162,8 +116822,15 @@ func (out *Trustconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -108241,7 +116908,9 @@ func (out *Trustdomain) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -108251,8 +116920,15 @@ func (out *Trustdomain) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -108277,7 +116953,9 @@ func (out *Trustdomain) UnmarshalJSON(data []byte) error {
   
   if in.Ipantflatname != nil {
     raw := in.Ipantflatname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -108287,8 +116965,15 @@ func (out *Trustdomain) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -108314,7 +116999,9 @@ func (out *Trustdomain) UnmarshalJSON(data []byte) error {
   
   if in.Ipanttrusteddomainsid != nil {
     raw := in.Ipanttrusteddomainsid
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -108324,8 +117011,15 @@ func (out *Trustdomain) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -108351,7 +117045,9 @@ func (out *Trustdomain) UnmarshalJSON(data []byte) error {
   
   if in.DomainEnabled != nil {
     raw := in.DomainEnabled
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -108361,8 +117057,15 @@ func (out *Trustdomain) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -108909,7 +117612,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.UID
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -108919,8 +117624,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -108945,7 +117657,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Givenname != nil {
     raw := in.Givenname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -108955,8 +117669,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -108982,7 +117703,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Sn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -108992,8 +117715,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109018,7 +117748,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Cn != nil {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -109028,8 +117760,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109055,7 +117794,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Displayname != nil {
     raw := in.Displayname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -109065,8 +117806,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109092,7 +117840,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Initials != nil {
     raw := in.Initials
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -109102,8 +117852,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109129,7 +117886,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Homedirectory != nil {
     raw := in.Homedirectory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -109139,8 +117898,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109166,7 +117932,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Gecos != nil {
     raw := in.Gecos
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -109176,8 +117944,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109203,7 +117978,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Loginshell != nil {
     raw := in.Loginshell
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -109213,8 +117990,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109240,7 +118024,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Krbcanonicalname != nil {
     raw := in.Krbcanonicalname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -109250,8 +118036,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109277,7 +118070,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Krbprincipalname != nil {
     raw := in.Krbprincipalname
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -109287,8 +118082,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109309,7 +118111,17 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Krbprincipalexpiration != nil {
     raw := in.Krbprincipalexpiration
-    plainV, plainOk := raw.(time.Time)
+    
+    stringV, stringOk := raw.(string)
+    plainOk := true
+    plainV, plainErr := time.Parse(fmt.Sprintf("%s %s", time.ANSIC, "MST"), stringV)
+    if !stringOk {
+      plainOk = false
+    }
+    if plainErr != nil {
+      plainOk = false
+    }
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []time.Time
     sliceOk := sliceWrapperOk
@@ -109319,8 +118131,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(time.Time)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(time.Time))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109346,7 +118165,17 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Krbpasswordexpiration != nil {
     raw := in.Krbpasswordexpiration
-    plainV, plainOk := raw.(time.Time)
+    
+    stringV, stringOk := raw.(string)
+    plainOk := true
+    plainV, plainErr := time.Parse(fmt.Sprintf("%s %s", time.ANSIC, "MST"), stringV)
+    if !stringOk {
+      plainOk = false
+    }
+    if plainErr != nil {
+      plainOk = false
+    }
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []time.Time
     sliceOk := sliceWrapperOk
@@ -109356,8 +118185,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(time.Time)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(time.Time))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109383,7 +118219,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Mail != nil {
     raw := in.Mail
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -109393,8 +118231,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109415,7 +118260,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Userpassword != nil {
     raw := in.Userpassword
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -109425,8 +118272,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109452,7 +118306,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Random != nil {
     raw := in.Random
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -109462,8 +118318,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109489,7 +118352,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Randompassword != nil {
     raw := in.Randompassword
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -109499,8 +118364,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109526,7 +118398,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Uidnumber != nil {
     raw := in.Uidnumber
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -109536,8 +118416,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -109567,7 +118454,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Gidnumber != nil {
     raw := in.Gidnumber
-    plainV, plainOk := raw.(int)
+    
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []int
     sliceOk := sliceWrapperOk
@@ -109577,8 +118472,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(int))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         intV, e := strconv.Atoi(itemV)
@@ -109608,7 +118510,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Street != nil {
     raw := in.Street
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -109618,8 +118522,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109645,7 +118556,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.L != nil {
     raw := in.L
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -109655,8 +118568,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109682,7 +118602,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.St != nil {
     raw := in.St
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -109692,8 +118614,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109719,7 +118648,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Postalcode != nil {
     raw := in.Postalcode
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -109729,8 +118660,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109756,7 +118694,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Telephonenumber != nil {
     raw := in.Telephonenumber
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -109766,8 +118706,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109788,7 +118735,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Mobile != nil {
     raw := in.Mobile
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -109798,8 +118747,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109820,7 +118776,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Pager != nil {
     raw := in.Pager
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -109830,8 +118788,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109852,7 +118817,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Facsimiletelephonenumber != nil {
     raw := in.Facsimiletelephonenumber
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -109862,8 +118829,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109884,7 +118858,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Ou != nil {
     raw := in.Ou
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -109894,8 +118870,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109921,7 +118904,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Title != nil {
     raw := in.Title
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -109931,8 +118916,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109958,7 +118950,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Manager != nil {
     raw := in.Manager
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -109968,8 +118962,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -109995,7 +118996,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Carlicense != nil {
     raw := in.Carlicense
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110005,8 +119008,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110027,7 +119037,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Ipasshpubkey != nil {
     raw := in.Ipasshpubkey
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110037,8 +119049,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110059,7 +119078,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Sshpubkeyfp != nil {
     raw := in.Sshpubkeyfp
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110069,8 +119090,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110091,7 +119119,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Ipauserauthtype != nil {
     raw := in.Ipauserauthtype
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110101,8 +119131,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110123,7 +119160,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Userclass != nil {
     raw := in.Userclass
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110133,8 +119172,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110155,7 +119201,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Ipatokenradiusconfiglink != nil {
     raw := in.Ipatokenradiusconfiglink
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110165,8 +119213,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110192,7 +119247,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Ipatokenradiususername != nil {
     raw := in.Ipatokenradiususername
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110202,8 +119259,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110229,7 +119293,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Departmentnumber != nil {
     raw := in.Departmentnumber
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110239,8 +119305,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110261,7 +119334,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Employeenumber != nil {
     raw := in.Employeenumber
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110271,8 +119346,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110298,7 +119380,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Employeetype != nil {
     raw := in.Employeetype
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110308,8 +119392,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110335,7 +119426,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Preferredlanguage != nil {
     raw := in.Preferredlanguage
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110345,8 +119438,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110372,7 +119472,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Usercertificate != nil {
     raw := in.Usercertificate
+    
     plainV, plainOk := raw.(interface{})
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []interface{}
     sliceOk := sliceWrapperOk
@@ -110382,8 +119484,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(interface{})
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(interface{}))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110404,7 +119513,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Ipacertmapdata != nil {
     raw := in.Ipacertmapdata
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110414,8 +119525,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110436,7 +119554,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Ipantlogonscript != nil {
     raw := in.Ipantlogonscript
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110446,8 +119566,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110473,7 +119600,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Ipantprofilepath != nil {
     raw := in.Ipantprofilepath
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110483,8 +119612,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110510,7 +119646,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Ipanthomedirectory != nil {
     raw := in.Ipanthomedirectory
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110520,8 +119658,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110547,7 +119692,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Ipanthomedirectorydrive != nil {
     raw := in.Ipanthomedirectorydrive
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110557,8 +119704,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110584,7 +119738,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Nsaccountlock != nil {
     raw := in.Nsaccountlock
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -110594,8 +119750,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110621,7 +119784,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.Preserved != nil {
     raw := in.Preserved
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -110631,8 +119796,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110658,7 +119830,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.HasPassword != nil {
     raw := in.HasPassword
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -110668,8 +119842,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110695,7 +119876,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.MemberofGroup != nil {
     raw := in.MemberofGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110705,8 +119888,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110727,7 +119917,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.MemberofRole != nil {
     raw := in.MemberofRole
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110737,8 +119929,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110759,7 +119958,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.MemberofNetgroup != nil {
     raw := in.MemberofNetgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110769,8 +119970,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110791,7 +119999,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.MemberofSudorule != nil {
     raw := in.MemberofSudorule
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110801,8 +120011,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110823,7 +120040,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.MemberofHbacrule != nil {
     raw := in.MemberofHbacrule
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110833,8 +120052,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110855,7 +120081,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.MemberofSubid != nil {
     raw := in.MemberofSubid
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110865,8 +120093,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110887,7 +120122,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectGroup != nil {
     raw := in.MemberofindirectGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110897,8 +120134,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110924,7 +120168,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectNetgroup != nil {
     raw := in.MemberofindirectNetgroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110934,8 +120180,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110961,7 +120214,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectRole != nil {
     raw := in.MemberofindirectRole
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -110971,8 +120226,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -110998,7 +120260,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectSudorule != nil {
     raw := in.MemberofindirectSudorule
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -111008,8 +120272,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -111035,7 +120306,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.MemberofindirectHbacrule != nil {
     raw := in.MemberofindirectHbacrule
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -111045,8 +120318,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -111072,7 +120352,9 @@ func (out *User) UnmarshalJSON(data []byte) error {
   
   if in.HasKeytab != nil {
     raw := in.HasKeytab
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -111082,8 +120364,15 @@ func (out *User) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -111182,7 +120471,9 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
   
   if in.Preserved != nil {
     raw := in.Preserved
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -111192,8 +120483,15 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -111219,7 +120517,9 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Server
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -111229,8 +120529,15 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -111255,7 +120562,9 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Krbloginfailedcount
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -111265,8 +120574,15 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -111291,7 +120607,9 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Krblastsuccessfulauth
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -111301,8 +120619,15 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -111327,7 +120652,9 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Krblastfailedauth
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -111337,8 +120664,15 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -111363,7 +120697,9 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Now
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -111373,8 +120709,15 @@ func (out *Userstatus) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -111544,7 +120887,9 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.Cn
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -111554,8 +120899,15 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -111580,7 +120932,9 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
   
   if in.Description != nil {
     raw := in.Description
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -111590,8 +120944,15 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -111617,7 +120978,9 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
   
   if in.Ipavaulttype != nil {
     raw := in.Ipavaulttype
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -111627,8 +120990,15 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -111654,7 +121024,9 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
   
   if in.Ipavaultsalt != nil {
     raw := in.Ipavaultsalt
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -111664,8 +121036,15 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -111691,7 +121070,9 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
   
   if in.Ipavaultpublickey != nil {
     raw := in.Ipavaultpublickey
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -111701,8 +121082,15 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -111728,7 +121116,9 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
   
   if in.OwnerUser != nil {
     raw := in.OwnerUser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -111738,8 +121128,15 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -111765,7 +121162,9 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
   
   if in.OwnerGroup != nil {
     raw := in.OwnerGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -111775,8 +121174,15 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -111802,7 +121208,9 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
   
   if in.OwnerService != nil {
     raw := in.OwnerService
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -111812,8 +121220,15 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -111839,7 +121254,9 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
   
   if in.Owner != nil {
     raw := in.Owner
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -111849,8 +121266,15 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -111876,7 +121300,9 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
   
   if in.Service != nil {
     raw := in.Service
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -111886,8 +121312,15 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -111913,7 +121346,9 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
   
   if in.Shared != nil {
     raw := in.Shared
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -111923,8 +121358,15 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -111950,7 +121392,9 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
   
   if in.Username != nil {
     raw := in.Username
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -111960,8 +121404,15 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -111987,7 +121438,9 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
   
   if in.MemberUser != nil {
     raw := in.MemberUser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -111997,8 +121450,15 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -112019,7 +121479,9 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
   
   if in.MemberGroup != nil {
     raw := in.MemberGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -112029,8 +121491,15 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -112051,7 +121520,9 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
   
   if in.MemberService != nil {
     raw := in.MemberService
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -112061,8 +121532,15 @@ func (out *Vault) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -112124,7 +121602,9 @@ func (out *Vaultconfig) UnmarshalJSON(data []byte) error {
   
   if true {
     raw := in.TransportCert
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -112134,8 +121614,15 @@ func (out *Vaultconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -112160,7 +121647,9 @@ func (out *Vaultconfig) UnmarshalJSON(data []byte) error {
   
   if in.KraServerServer != nil {
     raw := in.KraServerServer
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -112170,8 +121659,15 @@ func (out *Vaultconfig) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -112273,7 +121769,9 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
   
   if in.OwnerUser != nil {
     raw := in.OwnerUser
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -112283,8 +121781,15 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -112310,7 +121815,9 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
   
   if in.OwnerGroup != nil {
     raw := in.OwnerGroup
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -112320,8 +121827,15 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -112347,7 +121861,9 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
   
   if in.OwnerService != nil {
     raw := in.OwnerService
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -112357,8 +121873,15 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -112384,7 +121907,9 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
   
   if in.Owner != nil {
     raw := in.Owner
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -112394,8 +121919,15 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -112421,7 +121953,9 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
   
   if in.Service != nil {
     raw := in.Service
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -112431,8 +121965,15 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -112458,7 +121999,9 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
   
   if in.Shared != nil {
     raw := in.Shared
+    
     plainV, plainOk := raw.(bool)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []bool
     sliceOk := sliceWrapperOk
@@ -112468,8 +122011,15 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(bool)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(bool))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)
@@ -112495,7 +122045,9 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
   
   if in.Username != nil {
     raw := in.Username
+    
     plainV, plainOk := raw.(string)
+    
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []string
     sliceOk := sliceWrapperOk
@@ -112505,8 +122057,15 @@ func (out *Vaultcontainer) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.(string)
         
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.(string))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         
         sliceV = append(sliceV, itemV)

@@ -161,7 +161,27 @@ func (out *{{.UpperName}}) UnmarshalJSON(data []byte) error {
   {{range .Params}}
   if {{if .Required}}true{{else}}in.{{.UpperName}} != nil{{end}} {
     raw := in.{{.UpperName}}
+    {{if eq "time.Time" (ToGoType .Type)}}
+    stringV, stringOk := raw.(string)
+    plainOk := true
+    plainV, plainErr := time.Parse(fmt.Sprintf("%s %s", time.ANSIC, "MST"), stringV)
+    if !stringOk {
+      plainOk = false
+    }
+    if plainErr != nil {
+      plainOk = false
+    }
+    {{else if eq "int" (ToGoType .Type)}}
+    plainOk := true
+    stringV, stringOk := raw.(float64)
+    if !stringOk {
+      plainOk = false
+    }
+    plainV:= int(stringV)
+
+    {{else}}
     plainV, plainOk := raw.({{ToGoType .Type}})
+    {{end}}
     sliceWrapperV, sliceWrapperOk := raw.([]interface{})
     var sliceV []{{ToGoType .Type}}
     sliceOk := sliceWrapperOk
@@ -173,8 +193,15 @@ func (out *{{.UpperName}}) UnmarshalJSON(data []byte) error {
         itemV, itemOk := rawItem.({{ToGoType .Type}})
         {{end}}
         if !itemOk {
-          sliceOk = false
-          break
+          mapV, mapOk := rawItem.(map[string]interface{})
+          if mapOk {
+            for _, v := range mapV {
+              sliceV = append(sliceV, v.({{ToGoType .Type}}))
+            } 
+          } else {
+            sliceOk = false
+            break
+            }
         }
         {{if eq "int" (ToGoType .Type)}}
         intV, e := strconv.Atoi(itemV)

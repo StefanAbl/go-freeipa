@@ -144,6 +144,20 @@ func loadSchema() (*Schema, error) {
 					}
 				}
 			}
+			certNotRequiredParams := []string{
+				"status",
+				"revocation_reason",
+			}
+			if c.Name == "cert" {
+				for _, p := range c.Params {
+					for _, pp := range certNotRequiredParams {
+						if p.Name == pp {
+							v := false
+							p.RequiredRaw = &v
+						}
+					}
+				}
+			}
 
 			// HACK FreeIPA sometimes doesn't supply boolean fields which are
 			// marked required in schema. This workaround makes them optional.
